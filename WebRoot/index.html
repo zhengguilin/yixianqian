@@ -1,0 +1,2415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友" />
+<meta name="description" content="一线牵：减低您的开销，最专业的红娘,最严肃的婚恋网！" />
+<title>一线牵----严肃交友,专业红娘</title>
+
+<!--[if lte IE 6]>
+<script type="text/javascript" src="http://images2.jyimg.com/w4/profile_new/j/dd_belatedpng.js"></script>
+<script>
+    DD_belatedPNG.fix('.pngfix');
+</script>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/mosaic.1.0.1.js"></script>
+<script type="text/javascript" src="js/ajax-xingfu.html"></script>
+
+<script type="text/javascript">
+	function wait(cond, exec) {
+		setTimeout(function() {
+			if (!cond()) {
+				setTimeout(arguments.callee, 25);
+				return;
+			}
+			exec();
+		}, 0);
+	}
+
+	function ljf(obj) {
+		return document.getElementById(obj);
+	} //返回指定对象
+
+	function xf_tips() {
+		jQuery('.bar').mosaic({
+			animation : 'slide'
+		});
+		jQuery("#site-nav").mouseover(function() {
+			jQuery("#menu-bd").show();
+			jQuery('#site').addClass('hover');
+		});
+		jQuery("#site-nav").mouseout(function() {
+			jQuery("#menu-bd").hide();
+			jQuery('#site').removeClass('hover');
+		});
+	}
+
+	//去空格
+	String.prototype.trim = function() {
+		return this.replace(/(^\s*)|(\s*$)/g, "");
+	}
+	function show_msg(msg) {
+		var errorNode = ljf("errorInfo");
+		errorNode.style.display = "block";
+		var msg2 = '<span><img src="http://images1.jyimg.com/w4/login/i/0531/img2.jpg" />'
+				+ msg + '</span>';
+		errorNode.innerHTML = msg;
+	}
+
+	function saveName(e) {
+		if (e.checked == true) {
+			var r = false;
+			r = confirm("为了您的账号安全，请不要在网吧等公用电脑上使用此功能！\n手动退出后，此功能自动失效。");
+			if (r) {
+				e.checked = true;
+			} else {
+				e.checked = false;
+			}
+			return false;
+		}
+	}
+
+	//获取指定名称的cookie的值
+	function getCookie(objName) {
+		var arrStr = document.cookie.split("; ");
+		for ( var i = 0; i < arrStr.length; i++) {
+			var temp = arrStr[i].split("=");
+			if (temp[0] == objName)
+				return unescape(temp[1]);
+		}
+		return '';
+	}
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
+</head>
+<body>
+	<!--登录弹层 开始-->
+
+	<div id="header_login_pop_mask"
+		style="position: absolute; display: none; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0.3; background-color: rgb(0, 0, 0); z-index: 1100;"></div>
+	<div class="winpophead" id="header_login_pop_div"
+		style="position: absolute; display: none; z-index: 1200; left: 511.5px; top: 210px;">
+		<b class="bzt_l1"></b><b class="bzt_l2"></b><b></b>
+		<div class="winpophead_box">
+			<div class="winpophead_in">
+				<div class="winpophead_t" id="header_login_pop_bar"></div>
+				<div class="winpophead_c">
+					<p class="p_t" id="header_login_pop_title"></p>
+					<p class="p_c" id="header_login_pop_content"></p>
+					<p>
+						<a target="_self" id="header_login_pop_buttname"
+							href="javascript:void(0);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a target="_self" href="javascript:void(0);">以后再说</a>
+					</p>
+					<div></div>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<b></b><b class="bzt_l2"></b><b class="bzt_l1"></b>
+	</div>
+	<!--登录弹层 结束-->
+
+	<div id="bgdiv" style="display: none;"></div>
+	<!--S popa-->
+	<div id="pop_index_div" class="IndexPop-wrapper" style="display: none;">
+		<div class="IndexPop-content">
+			<!--男女第一处不同 女性使用IndexPop-pnga，男性使用IndexPop-pnga-man，晒幸福IndexPop-pnga-showhappiness-->
+			<p id="pop_class_1" class="IndexPop-pnga-man"></p>
+			<p class="IndexPop-pngb"></p>
+			<p class="IndexPop-top">
+				<a href="javascript:void(0);">X</a>
+			</p>
+			<!--男女第二处不同 女性和晒幸福使用IndexPop-cnt-top-girl，男性使用IndexPop-cnt-top-->
+			<div id="pop_class_2" class="IndexPop-cnt-top">
+				<div class="IndexPop-Album">
+					<div class="IndexPop-Album-big">
+						<p class="IndexPop-Album-big-p">
+							<span class="box"> <a id="b_photo0" class="b_img_box"><img
+									id="b_img0" src="images/block_1x1.gif" /></a> <a id="b_photo1"
+								style="display: none" class="b_img_box"><img id="b_img1"
+									src="images/block_1x1.gif" /></a> <a id="b_photo2"
+								style="display: none" class="b_img_box"><img id="b_img2"
+									src="images/block_1x1.gif" /></a> <a id="b_photo3"
+								style="display: none" class="b_img_box"><img id="b_img3"
+									src="images/block_1x1.gif" /></a>
+							</span>
+						</p>
+					</div>
+					<table class="IndexPop-Album-small" cellpadding="0" cellspacing="6"
+						border="0" width="0">
+						<tbody>
+							<tr>
+								<td><div class="s_img_box">
+										<img id="s_img0" onclick="show_photo(0);"
+											src="images/block_1x1.gif" />
+									</div></td>
+								<td><div class="s_img_box">
+										<img id="s_img1" onclick="show_photo(1);"
+											src="images/block_1x1.gif" />
+									</div></td>
+								<td><div class="s_img_box">
+										<img id="s_img2" onclick="show_photo(2);"
+											src="images/block_1x1.gif" />
+									</div></td>
+								<td><div class="s_img_box">
+										<img id="s_img3" onclick="show_photo(3);"
+											src="images/block_1x1.gif" />
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="IndexPop-PersonalInformation">
+					<div class="fn-clear">
+						<!--用户信息使用class="colorE7417F"，晒幸福使用class="colorE7417F fn-left"-->
+						<h2 id="pop_title" class="colorE7417F"></h2>
+						<!--用户信息使用class="IndexPop-User-profile"，晒幸福使用class="IndexPop-broadcast IndexPop-broadcast-girl fn-right"-->
+						<p id="pop_intro" class="IndexPop-User-profile"></p>
+					</div>
+					<div class="IndexPop-PersonalInformationBottom">
+						<!--晒幸福多出H3这一行，个人信息此行隐藏style.display:none-->
+						<h3 id="pop_space_name"></h3>
+						<p id="pop_content" class="color666">数据载入中.....</p>
+					</div>
+				</div>
+			</div>
+			<iframe id="pop_register_form" name="pop_register_form"
+				style="position: static;" src="web/index_1.html" frameborder="0"
+				scrolling="no"></iframe>
+		</div>
+		<!--[if IE 6]><iframe class="div_iframe" src="images/javascript:'';"></iframe><![endif]-->
+	</div>
+	<!--E popb-->
+	<script type="text/javascript" src="js/jy.login.js"></script>
+	<!--佳缘桌面弹层开始-->
+	<script src="js/clickonce.js" type="text/javascript"></script>
+	<div class="layerTable" id="layerTable" style="display: none;">
+		<div class="layerTableTop">
+			<a href="javascript:hidelayerTable(0)" class="layerTableClose"></a>
+		</div>
+		<div class="layerTableBody">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tbody>
+					<tr>
+						<td><a href="javascript:hidelayerTable(2)"
+							class="layerTableButton"></a></td>
+						<td><a href="javascript:hidelayerTable(1)"
+							class="layerTableLink">查看详情</a></td>
+						<td><a href="javascript:hidelayerTable(0)"
+							class="layerTableLink">以后再说</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!--佳缘桌面弹层结束-->
+
+
+	<!--S 网站顶部-->
+	<div id="jycm_top" class="jycm_top">
+		<div class="w970" id="head_nologin" style="">
+			<!-- 登录之前start -->
+			<div class="jycm_top_login">
+				<iframe src="web/index_2.html" id="hder_hid_login_win"
+					name="hder_hid_login_win" style="display: none;" height="0"
+					width="0"></iframe>
+				<form id="hder_login_form" target="hder_hid_login_win" action="#"
+					method="post">
+					<input name="channel" value="200" type="hidden" /> <input
+						name="position" value="201" type="hidden" />
+					<p class="jycm_top_zh">
+						<span>帐号</span> <input value="" name="name" type="text" />
+					</p>
+					<p class="jycm_top_mm">
+						<span>密码</span> <input name="password" type="password" />
+					</p>
+					<p class="jycm_top_zddl">
+						<label> <input id="check_save" onclick="head_login_save_me(this);"
+							type="checkbox" />自动登录
+						</label>
+					</p>
+					<input class="jycm_top_btn_dl" value="登录" type="submit" />
+					<p class="jycm_top_login2">
+						<span>其他登录：</span><a target="_top" class="openid_qq" href="#"><img
+							src="images/qq.gif" alt="QQ" /></a><a target="_top"
+							class="openid_weibo" href="#"><img src="images/weibo.gif"
+							alt="Weibo" /></a><a target="_top" class="openid_baidu" href="#"><img
+							src="images/baidu.gif" alt="Baidu" /></a><a target="_top" href="#"><img
+							alt="Alipay" src="images/zfb.gif" /></a>
+					</p>
+
+
+					<p class="jycm_top_reg">
+						<a onmousedown="javascript:void(0);" href="#" target="_top">忘记密码</a>
+						<a onmousedown="javascript:void(0);" href="zcIndex.html" target="_top">免费注册</a>
+					</p>
+				</form>
+			</div>
+			<div class="jycm_top_right">
+				<p class="jycm_top_collect jycm_top_icon">
+					<a onmousedown="javascript:void(0);" id="jycm_top_collect"
+						href="javascript:void(0);" onclick="javascript:void(0);">收藏本站</a>
+				</p>
+			</div>
+			<!-- 登录之前end -->
+		</div>
+
+		<div class="w970" id="head_login" style="display: none;">
+			<!-- 登录之后start -->
+			<div class="jycm_top_wel">
+				<p>
+					Hi,<a class="color_e7417f" target="_top" href="#">一线牵会员</a>
+				</p>
+				<p class="jycm_top_vline">|</p>
+				<p>
+					一线牵ID：<a class="color_e7417f" target="_top" href="#">UID</a>
+				</p>
+				<p class="jycm_top_vline">|</p>
+				<p>
+					<a class="color_666" onmousedown="javascript:void(0);"
+						target="_self" href="#">退出</a>
+				</p>
+			</div>
+			<div class="jycm_top_right">
+				<p class="jycm_top_collect jycm_top_icon">
+					<a onmousedown="javascript:void(0);" id="jycm_top_collect"
+						href="javascript:void(0);" onclick="javascript:void(0);">收藏本站</a>
+				</p>
+				<p class="jycm_top_vline">|</p>
+				<p class="jycm_top_phone jycm_top_icon">
+					<a onmousedown="javascript:void(0);" href="#" target="_top">手机交友</a>
+				</p>
+				<p class="jycm_top_vline">|</p>
+				<p class="jycm_top_jx jycm_top_icon">
+					<a onmousedown="javascript:void(0);" href="#" target="_top">一线牵佳信</a>
+				</p>
+			</div>
+			<!-- 登录之后end -->
+		</div>
+	</div>
+
+
+	<div id="tixingText" class="tixingText" style="display: none;">
+		<div class="tixingTextdiv">为了提供更优异的服务，在2013年4月24日凌晨04:00--04:40，一线牵将进行系统升级。在此期间，短暂影响您的发信、看信和支付，会员数据不会丢失。</div>
+		<a class="tixingTextClose"
+			onclick="javascript:document.getElementById('tixingText').style.display='none'"
+			href="javascript:"></a>
+	</div>
+
+
+	<!--E 网站顶部-->
+
+	<!--新版城市切换和导航部分 start-->
+	<div id="jycm_head" class="jycm_head">
+		<div class="jycm_head_top">
+			<h1 class="logo">
+				<a onmousedown="javascript:void(0);" id="index_logo" href="#"><img
+					src="images/logo.png" /></a>
+			</h1>
+			<div class="jycm_head_selectCity">
+				<div id="jycm_head_clickCity" class="jycm_head_clickCity">
+					<p class="jycm_head_nowCity" id="show_loc_div">
+						<a onmousedown="javascript:void(0);" href="javascript:void(0);"
+							id="city_text">湖北</a>
+					</p>
+					<p class="jycm_head_qieCity">
+						<a onmousedown="javascript:void(0);" href="javascript:void(0);"
+							id="open1">[切换城市]</a>
+					</p>
+				</div>
+				<div id="jycm_head_showCity" class="jycm_head_showCity">
+					<div class="jycm_city_close" id="closepop">
+						<a href="javascript:void(0);" onclick="return false;">关闭</a>
+					</div>
+					<dl>
+						<dt>
+							<span>华 北：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a11">北京市</span><span class="citylist"
+									id="a12">天津市</span><span class="citylist" id="a13">河北</span><span
+									class="citylist" id="a14">山西</span><span class="citylist"
+									id="a15">内蒙古</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>东 北：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a23">黑龙江</span><span class="citylist"
+									id="a22">吉林</span><span class="citylist" id="a21">辽宁</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>华 东：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a31">上海市</span><span class="citylist"
+									id="a32">江苏</span><span class="citylist" id="a33">浙江</span><span
+									class="citylist" id="a34">安徽</span><span class="citylist"
+									id="a35">福建</span><span class="citylist" id="a36">江西</span><span
+									class="citylist" id="a37">山东</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>中 南：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a41">河南</span><span
+									class="citylist red" id="a42">湖北</span><span class="citylist"
+									id="a43">湖南</span><span class="citylist" id="a44">广东</span><span
+									class="citylist" id="a45">广西</span><span class="citylist"
+									id="a46">海南</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>西 南：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a50">重庆市</span><span class="citylist"
+									id="a51">四川</span><span class="citylist" id="a52">贵州</span><span
+									class="citylist" id="a53">云南</span><span class="citylist"
+									id="a54">西藏</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>西 北：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a61">陕西</span><span class="citylist"
+									id="a62">甘肃</span><span class="citylist" id="a63">青海</span><span
+									class="citylist" id="a64">宁夏</span><span class="citylist"
+									id="a65">新疆</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>港澳台：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a81">香港</span><span class="citylist"
+									id="a82">澳门</span><span class="citylist" id="a71">台湾</span>
+							</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>国 外：</span>
+						</dt>
+						<dd>
+							<p>
+								<span class="citylist" id="a99">国外</span>
+							</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="jycm_head_ad"></div>
+		</div>
+		<div id="jycm_head_nav" class="jycm_head_navBg">
+			<div class="jycm_head_nav">
+				<ul>
+					<li class="jycm_head_nav_cur">
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_1" href="#">首页</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_2" href="#" target="_top">我的一线牵</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_3" href="#" target="_top">搜索</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_10" href="#" target="_top">新会员</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_11" href="#" target="_top">聊天</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_4" href="#" target="_top">活动</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_8" href="#" target="_top">两性</a></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span><a onmousedown="javascript:void(0);"
+								id="index_nav_7" href="#" target="_top">晒幸福</a></span>
+						</p>
+					</li>
+				</ul>
+				<div class="jycm_head_navOthor">
+					<a onmousedown="javascript:void(0);" id="index_nav_6" href="#"
+						target="_top">红娘一对一</a> <a onmousedown="javascript:void(0);"
+						class="jycm_head_nav_azx" id="index_nav_9" href="#" target="_top">爱真心</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--新版城市切换和导航部分 end-->
+	<script type="text/javascript">
+		//获取当前地域
+		function get_ip_loc() {
+			var loc = JY.tool.cookie.get('ip_loc');
+			if (loc == null) {
+				jQuery.ajax({
+					url : 'getprofile.php',
+					type : 'GET',
+					async : false,
+					success : function(data) {
+						var num = parseInt(data);
+						if (!isNaN(num) && num)
+							JY.tool.cookie.set('ip_loc', num, 10 * 24 * 60);
+						loc = num;
+					}
+				});
+			}
+			if (!loc)
+				loc = 11;
+			return loc;
+		}
+		//获取地域
+		function get_loc() {
+			var l = JY.tool.cookie.get("selloc");
+			if (!l) {
+				l = get_ip_loc();
+			}
+			return l;
+		}
+		//设置地区
+		function set_loc(loc_id) {
+			$("#a" + get_loc()).removeClass("red");
+			JY.tool.cookie.set("selloc", loc_id);
+			$("#city_text").html($("#a" + get_loc()).addClass("red").html());
+		}
+		//向COOKIE里写标志，用于按地区搜索数据
+		function set_index_search_cookie() {
+			JY.tool.cookie.set('index_loc_default', 'hi');
+		}
+		//选中指定的下拉列表项
+		function jsSelectItem(objSelect, objItemValue) {
+			for ( var i = 0; i < objSelect.options.length; i++) {
+				if (objSelect.options[i].value == objItemValue) {
+					objSelect.options[i].selected = true;
+					break;
+				}
+			}
+		}
+		//切换地区
+		wait(function() {
+			return typeof $ != "undefined" && typeof JY != "undefined"
+		}, function() {
+			//地区标红和点击
+			$("#city_text").html($("#a" + get_loc()).addClass("red").html());
+			$("#jycm_head_clickCity").show();
+			$("#jycm_head_showCity dl dd p .citylist").click(
+					function() {
+						JY.tool.cookie.set("selloc", this.id.match(/\d+/)[0],
+								10 * 24 * 60);
+						set_index_search_cookie();
+						window.location.reload();
+					});
+			//隐藏地区层
+			$("#closepop").click(
+					function() {
+						$("#jycm_head_clickCity").removeClass(
+								'Indexcity-Selected-after').addClass(
+								'Indexcity-Selected-before');
+						$("#jycm_head_showCity").hide();
+					});
+			//显示地区层
+			$("#jycm_head_clickCity").click(
+					function() {
+						$("#jycm_head_showCity").show();
+						$("#jycm_head_clickCity").removeClass(
+								'Indexcity-Selected-before').addClass(
+								'Indexcity-Selected-after');
+					});
+		});
+
+		$(document).ready(function() {
+			$('#jycm_head_clickCity a').click(function() {
+				$('#jycm_head_showCity').show();
+			});
+			$('#jycm_head_showCity div.jycm_city_close a').click(function() {
+				$('#jycm_head_showCity').hide();
+			});
+			$('#jycm_head_showCity dd span').click(function() {
+				var _thisHtml = $(this).html();
+				$('#jycm_head_clickCity a').eq(0).html(_thisHtml);
+				$('#jycm_head_showCity').hide();
+			});
+		});
+		//收藏
+		function jycm_addFav() {
+			var d = "http://www.jiayuan.com/";
+			var c = "世纪佳缘";
+			if (document.all || navigator.userAgent.indexOf("Trident") >= 0) {
+				window.external.AddFavorite(d, c);
+			} else {
+				if (window.sidebar) {
+					window.sidebar.addPanel(c, d, "");
+				} else {
+					alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。")
+				}
+			}
+		}
+
+		//导航统计标签切换
+		function set_nav_tag_total() {
+			for ( var i = 1; i <= 11; i++) {
+				if (JY.login.getUser().uid > 0) {
+					if (i != 5) {
+						ljf('index_nav_' + i).setAttribute(
+								"onmousedown",
+								"javascript:send_jy_pv2('|index2012_nav_login"
+										+ i + "|');");
+					}
+				} else {
+					if (i != 5) {
+						ljf('index_nav_' + i).setAttribute(
+								"onmousedown",
+								"javascript:send_jy_pv2('|index2012_nav_logout"
+										+ i + "|');");
+					}
+				}
+			}
+		}
+		set_nav_tag_total();
+
+		//切换城市统计标签切换
+		function set_selcity_tag_total() {
+			if (JY.login.getUser().uid > 0) {
+				ljf('city_text').setAttribute("onmousedown",
+						"javascript:send_jy_pv2('|index2012_selcity_login|');");
+				ljf('open1').setAttribute("onmousedown",
+						"javascript:send_jy_pv2('|index2012_selcity_login|');");
+				ljf('index_logo').setAttribute("onmousedown",
+						"javascript:send_jy_pv2('|index2012_logo_login|');");
+			} else {
+				ljf('city_text')
+						.setAttribute("onmousedown",
+								"javascript:send_jy_pv2('|index2012_selcity_logout|');");
+				ljf('open1')
+						.setAttribute("onmousedown",
+								"javascript:send_jy_pv2('|index2012_selcity_logout|');");
+				ljf('index_logo').setAttribute("onmousedown",
+						"javascript:send_jy_pv2('|index2012_logo_logout|');");
+			}
+		}
+		set_selcity_tag_total();
+	</script>
+
+	<!--E 网站头部-->
+
+
+
+	<!--S Indexcontent-->
+	<div class="Indexcontent">
+		<div class="fn-clear">
+			<div class="fn-left">
+				<!-- ==S RegisterArea-->
+				<div class="RegisterArea">
+					<!-- 登录前  star-->
+					<div style="" id="index_reg_div">
+						<p class="IPOImg">
+							<img src="images/index_img01.gif" alt="" height="90" width="278" />
+						</p>
+						<p class="ui-btn-IndexReg">
+							<a onmousedown="javascript:void(0);" href="#" target="_top">免费注册</a>
+						</p>
+						<p class="IndexMember ui-link-underline ui-link-333toE7417F">
+							<a onmousedown="javascript:void(0);" href="#" target="_top">我是会员，立即登录</a>
+						</p>
+					</div>
+					<!-- 登录前  end-->
+					<!-- 登录切换  star-->
+					<div id="index_login_form" style="display: none;">
+						<script type="text/javascript">
+							function check_form() {
+								if (ljf('login_email').value == ''
+										|| ljf('login_email').value == '邮箱/手机号/佳缘ID') {
+									alert('请输入登录帐号！');
+									ljf('login_email').focus();
+									return false;
+								}
+								if (ljf('login_password').value == '') {
+									alert('请输入登录密码！');
+									ljf('login_password').focus();
+									return false;
+								}
+								return true;
+							}
+						</script>
+						<form id="login" name="login" action="#" method="post"
+							onsubmit="return check_form();">
+							<input name="channel" value="200" type="hidden" /> <input
+								name="position" value="202" type="hidden" />
+							<p class="colorE7417F Member-login">会员登录</p>
+							<p class="Member-login-InputElement">
+								账 号<input id="login_email" name="name"
+									class="ui-input-Memberlogin color999" value="邮箱/手机号/一线牵ID"
+									onfocus="if(value=='邮箱/手机号/一线牵ID') {value=''}"
+									onblur="if (value=='') {value='邮箱/手机号/一线牵ID'}" type="text" />
+							</p>
+							<p class="Member-login-InputElement">
+								密 码<input id="login_password" name="password"
+									class="ui-input-Memberlogin color999" value="" type="password" />
+							</p>
+							<p class="two-weeks-login">
+								<input id="check_save" name="remem_pass" checked="checked"
+									type="checkbox" />两周内自动登录
+							</p>
+							<p class="Member-login-btnArea">
+								<input onmousedown="send_jy_pv2('|index2012_login_button|');"
+									class="ui-btn-MemberLogin" value="登录" type="submit" /> <span
+									class="ml10 ui-link-333toE7417F ui-link-underline"><a
+									onmousedown="send_jy_pv2('|index2012_forget_login|');"
+									href="http://www.jiayuan.com/login/validate.php" target="_top">忘记密码</a></span>
+							</p>
+							<p class="ui-link-underline ui-link-333toE7417F NotMember">
+								<a onmousedown="send_jy_pv2('|index2012_reg_right2|');"
+									href="http://reg.jiayuan.com/?bd=205" target="_top"
+									class="color333">还不是会员？立即注册，填写资料</a>
+							</p>
+						</form>
+					</div>
+					<!-- 登录切换  end-->
+					<!-- 登录后  star-->
+					<div id="index_login_div" class="WelcomeMemberArea"
+						style="display: none;">
+						<div class="WelcomeMember-P fn-clear">
+							<p class="WelcomeMember fn-left">
+								欢迎您：<span class="ui-link-Nounderline"><a
+									onmousedown="send_jy_pv2('|index2012_login_nickname|');"
+									href="http://www.jiayuan.com/usercp/" class="colorE7417F"
+									target="_top">昵称</a></span>
+							</p>
+							<p class="ui-link-underline ui-link-333toE7417F fn-right">
+								<a onmousedown="send_jy_pv2('|index2012_login_tuichu|');"
+									href="http://www.jiayuan.com/login/logout.php">退出</a>
+							</p>
+						</div>
+						<div class="fn-clear">
+							<div class="ShadowB fn-left">
+								<p class="ShadowB-bg"></p>
+								<a id="touxiang"
+									onmousedown="send_jy_pv2('|index2012_login_|index2012_login_photo|');"
+									href="http://www.jiayuan.com/?bd=1" target="_top"><img
+									src="#" alt="" height="110" width="90" /></a>
+							</div>
+							<ul id="index_userinfo"
+								class="WelcomeMember-ul color666 fn-right">
+								<li>邮件：<span
+									class="ui-link-2C81D6toE7417F ui-link-underline"><a
+										onmousedown="send_jy_pv2('|index2012_login_mail|');"
+										href="http://www.jiayuan.com/msg/" target="_top">查看邮件</a></span></li>
+								<li>礼物：<span
+									class="ui-link-2C81D6toE7417F ui-link-underline"><a
+										onmousedown="send_jy_pv2('|index2012_login_gift|');"
+										href="http://gift.jiayuan.com/" target="_top">查看礼物</a></span></li>
+								<li>资料：<span id="ziliao" class="colorE7417F"></span>&nbsp;<span
+									class="ui-link-2C81D6toE7417F ui-link-underline"><a
+										onmousedown="send_jy_pv2('|index2012_login_profile|');"
+										href="http://www.jiayuan.com/usercp/profile.php" target="_top">完善</a></span></li>
+								<li>照片：<span id="zhaopian" class="colorE7417F"></span>&nbsp;<span
+									class="ui-link-2C81D6toE7417F ui-link-underline"><a
+										onmousedown="send_jy_pv2('|index2012_login_upload|');"
+										href="http://www.jiayuan.com/usercp/photo.php" target="_top">上传</a></span></li>
+								<li>邮票：<span id="youpiao" class="colorE7417F"></span>&nbsp;<span
+									class="ui-link-2C81D6toE7417F ui-link-underline"><a
+										onmousedown="send_jy_pv2('|index2012_login_stamp|');"
+										href="http://www.jiayuan.com/usercp/center/charge.php#author_wp"
+										target="_top">充值</a></span></li>
+							</ul>
+						</div>
+						<p class="ui-btn-ComeintomyJY">
+							<a href="http://usercp.jiayuan.com/" target="_top">进入我的一线牵</a>
+						</p>
+						<p id="tuijian_block" class="Referral-service">
+							推荐服务： <span class="ui-link-underline ui-link-E7417FtoE7417F"></span>
+						</p>
+					</div>
+					<!-- 登录后  end-->
+				</div>
+				<!-- ==E RegisterArea-->
+			</div>
+			<div class="fn-right">
+				<!-- ==S Focus-->
+				<!--焦点图 开始-->
+				<div class="flash">
+					<div class="img">
+						<ul>
+							<li id="flash_id1"><a onmousedown="javascript:void(0);"
+								href="#" target="_top"><img alt="宝宝"
+									src="images/20130801012402237.jpg" style="" /></a>
+								<div style="display: none;"></div></li>
+						</ul>
+					</div>
+					<div id="flash_id1_1" class="btn_table">
+						<ul>
+							<li><a class="off" href="###">高端猎婚</a></li>
+							<li><a class="on" href="###">宝宝</a></li>
+							<li><a class="off" href="###">十周年</a></li>
+							<li><a class="off" href="###">世纪游轮</a></li>
+							<li><a class="off" href="###">魅力会员</a></li>
+							<li><a class="off" href="###">魅力会员</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<script type="text/javascript" src="js/focus.js"></script>
+				<script type="text/javascript">
+					//设置焦点图
+					function set_focus_imgs() {
+						if (JY.login.getUser().uid > 0) {
+							var total_flag = 'focus_total_login_'; //统计标识，登录后
+							var datas = [
+									{
+										'title' : '华西',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6681',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812061407163.jpg',
+										'loc' : [ 42, 43, 50, 51, 52, 53, 54,
+												61, 62, 63, 64, 65 ]
+									},
+									{
+										'title' : '华南【广州】“缘分1+1”',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6448',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0814/20130814112954188.jpg',
+										'loc' : [ 35, 36, 44, 45, 46, 71, 81,
+												82, 99 ]
+									},
+									{
+										'title' : '华东【上海】绑嫁爱情',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6494',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812095938887.jpg',
+										'loc' : [ 31, 32, 33, 34, 37 ]
+									},
+									{
+										'title' : '华北【北京千人免费】',
+										'url' : 'http://subject.jiayuan.com/yibo/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0722/20130722110758746.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 41 ]
+									},
+									{
+										'title' : '华北【北京】',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6661',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812095712702.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 41 ]
+									},
+									{
+										'title' : '华西【重庆】 冬日恋歌',
+										'url' : 'http://subject.jiayuan.com/2013Q3/youlun/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0725/20130725041819300.jpg',
+										'loc' : [ 42, 43, 50, 51, 52, 53, 54,
+												61, 62, 63, 64, 65 ]
+									},
+									{
+										'title' : '华南【深圳】“缘分1+1”',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6673',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0814/20130814112027960.jpg',
+										'loc' : [ 35, 36, 44, 45, 46, 71, 81,
+												82, 99 ]
+									},
+									{
+										'title' : '华东【杭州】绑嫁爱情',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6669',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812100054121.jpg',
+										'loc' : [ 31, 32, 33, 34, 37 ]
+									},
+									{
+										'title' : '华北',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6639',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812095804613.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 41 ]
+									},
+									{
+										'title' : '华南',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6650',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0815/20130815014046781.jpg',
+										'loc' : [ 35, 36, 44, 45, 46, 71, 81,
+												82, 99 ]
+									},
+									{
+										'title' : '华东',
+										'url' : 'http://subject.jiayuan.com/yibo/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0722/20130722111025675.jpg',
+										'loc' : [ 31, 32, 33, 34, 37 ]
+									},
+									{
+										'title' : '华西',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6677',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0813/20130813010825744.jpg',
+										'loc' : [ 42, 43, 50, 51, 52, 53, 54,
+												61, 62, 63, 64, 65 ]
+									},
+									{
+										'title' : 'VIP  华南+湖南  湖北',
+										'url' : 'http://subject.jiayuan.com/2013Q2/xflhj/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0614/20130614033320785.jpg',
+										'loc' : [ 35, 36, 42, 43, 44, 45, 46,
+												71, 81, 82, 99 ]
+									},
+									{
+										'title' : 'Y先生征婚  高端猎婚',
+										'url' : 'http://subject.jiayuan.com/2013Q1/yxs/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0813/20130813043910474.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 31, 32, 33, 34, 37, 41, 50,
+												51, 52, 53, 54, 61, 62, 63, 64,
+												65 ]
+									},
+									{
+										'title' : '华西【银川】冬日恋歌 开往春天的地铁',
+										'url' : 'http://subject.jiayuan.com/yibo/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0722/20130722111500839.jpg',
+										'loc' : [ 42, 43, 50, 51, 52, 53, 54,
+												61, 62, 63, 64, 65 ]
+									},
+									{
+										'title' : '华东【上海精品餐会】爱恋精英 共尝倾世情缘',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6418',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0722/20130722111241372.jpg',
+										'loc' : [ 31, 32, 33, 34, 37 ]
+									},
+									{
+										'title' : '华北【哈尔滨】',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6557',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812095852457.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 41 ]
+									},
+									{
+										'title' : '华南【海口】“谁说不能黑白配”',
+										'url' : 'http://subject.jiayuan.com/yibo/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0722/20130722111802155.jpg',
+										'loc' : [ 35, 36, 44, 45, 46, 71, 81,
+												82, 99 ]
+									},
+									{
+										'title' : '重庆  华西  6',
+										'url' : 'http://www.mjzxmr.com/zt/mljsjzl/',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0726/20130726015512838.jpg',
+										'loc' : [ 50 ]
+									},
+									{
+										'title' : '华西【玉溪】冬日恋歌',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6707',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0816/20130816044108109.jpg',
+										'loc' : [ 42, 43, 51, 52, 53, 54, 61,
+												62, 63, 64, 65 ]
+									},
+									{
+										'title' : '华南 高端精品',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6493',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0816/20130816015837335.jpg',
+										'loc' : [ 35, 36, 44, 45, 46, 71, 81,
+												82, 99 ]
+									},
+									{
+										'title' : '华东  倾城之恋',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6668',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812100145236.jpg',
+										'loc' : [ 31, 32, 33, 34, 37 ]
+									},
+									{
+										'title' : '华北【长春】',
+										'url' : 'http://party.jiayuan.com/party_info.php?pid=6622',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0805/20130805104304169.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 41 ]
+									},
+									{
+										'title' : '唐伯虎点秋香',
+										'url' : 'http://www.jiayuan.com/subject/2012Q3/tbh/index.html',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2012/0905/20120905094612521.jpg',
+										'loc' : []
+									} ];
+						} else {
+							var total_flag = 'focus_total_logout_'; //统计标识，登录前
+							var datas = [
+									{
+										'title' : '高端猎婚',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0717/20130717103450207.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 31, 32, 33, 34, 35, 36, 37,
+												41, 42, 43, 44, 45, 46, 50, 51,
+												52, 53, 54, 61, 62, 63, 64, 65,
+												71, 81, 82, 99 ]
+									},
+									{
+										'title' : '宝宝',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0801/20130801012402237.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 31, 32, 33, 34, 35, 36, 37,
+												41, 42, 43, 44, 45, 46, 50, 51,
+												52, 53, 54, 61, 62, 63, 64, 65,
+												71, 81, 82, 99 ]
+									},
+									{
+										'title' : '十周年',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0807/20130807121003346.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 31, 32, 33, 34, 35, 36, 37,
+												41, 42, 43, 44, 45, 46, 50, 51,
+												52, 53, 54, 61, 62, 63, 64, 65,
+												71, 81, 82, 99 ]
+									},
+									{
+										'title' : '非缘勿扰  北京',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0812/20130812110320843.jpg',
+										'loc' : [ 11 ]
+									},
+									{
+										'title' : '非缘勿扰  含logo',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0715/20130715015915451.jpg',
+										'loc' : [ 12, 13, 14, 15, 21, 22, 23,
+												32, 33, 34, 35, 36, 37, 41, 44,
+												45, 46, 54, 61, 62, 63, 64, 65,
+												71, 81, 82, 99 ]
+									},
+									{
+										'title' : '世纪游轮',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0725/20130725042959506.jpg',
+										'loc' : [ 42, 43, 50, 51, 52, 53 ]
+									},
+									{
+										'title' : '新恋爱时代  上海',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0719/20130719015819575.jpg',
+										'loc' : [ 31 ]
+									},
+									{
+										'title' : '魅力会员',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0807/20130807120207717.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 31, 32, 33, 34, 35, 36, 37,
+												41, 42, 43, 44, 45, 46, 50, 51,
+												52, 53, 54, 61, 62, 63, 64, 65,
+												71, 81, 82, 99 ]
+									},
+									{
+										'title' : '魅力会员',
+										'url' : '#',
+										'img' : 'http://images.jiayuan.com/w4/global/cms/uploadfile/2013/0722/20130722021849125.jpg',
+										'loc' : [ 11, 12, 13, 14, 15, 21, 22,
+												23, 31, 32, 33, 34, 35, 36, 37,
+												41, 42, 43, 44, 45, 46, 50, 51,
+												52, 53, 54, 61, 62, 63, 64, 65,
+												71, 81, 82, 99 ]
+									} ];
+						}
+						ljf('flash_id1').innerHTML = '';
+						ljf('flash_id1_1').innerHTML = '';
+						var ip_loc = get_loc();
+						var rvt = new RevealTrans("flash_id1", {
+							Auto : true,
+							Transition : 23
+						}, {
+							flash_id1_1 : 6
+						});
+						for ( var i = 0; i < datas.length; i++) {
+							if (rvt.List.length >= 6)
+								break;
+							if (!datas[i].loc.length)
+								rvt.Add(datas[i].img, datas[i].url,
+										datas[i].title, total_flag + (i + 1));
+							else
+								for ( var j = 0; j < datas[i].loc.length; j++) {
+									if (datas[i].loc[j] == ip_loc) {
+										rvt.Add(datas[i].img, datas[i].url,
+												datas[i].title, total_flag
+														+ (i + 1));
+										break;
+									}
+								}
+						}
+						rvt.Start();
+					}
+					set_focus_imgs();
+				</script>
+
+
+				<!--焦点图 结束-->
+				<!-- ==E Focus-->
+			</div>
+		</div>
+		<div class="fn-clear">
+			<!-- =S Indexleft-->
+			<div class="fn-left">
+				<!-- ==S ShowHappinessArea-->
+				<div class="ShowHappinessArea">
+					<div class="fn-clear">
+						<h2 class="ui-link-333toE7417F fn-left ui-link-Nounderline">
+							<a id="xf_title" href="#" target="_top">晒幸福</a>
+						</h2>
+						<ul class="ui-tab-underBg fn-left">
+							<li class="tabactive" onmouseover="easytabs_new(0);"
+								id="tablink0"></li>
+							<li onmouseover="easytabs_new(1);" id="tablink1"></li>
+							<li onmouseover="easytabs_new(2);" id="tablink2"></li>
+							<li onmouseover="easytabs_new(3);" id="tablink3"></li>
+						</ul>
+						<span
+							class="more Indexmore ui-link-underline ui-link-2C81D6toE7417F fn-right"><a
+							onmousedown="javascript:void(0);" id="xf_more" href="#"
+							target="_top">更多&gt;&gt;</a></span>
+					</div>
+					<div>
+						<div class="ui-tab-underBg-content">
+							<ul id="tabcontent0"></ul>
+							<ul id="tabcontent1" style="display: none;"></ul>
+							<ul id="tabcontent2" style="display: none;"></ul>
+							<ul id="tabcontent3" style="display: none;"></ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ==E ShowHappinessArea-->
+				<script type="text/javascript">
+					//xf_tips();
+
+					//处理晒幸福
+					//切换统计标识（登录前后不同）
+					function set_xf_total_tag(uid) {
+						if (uid > 0) { //登录后
+							ljf('xf_title').setAttribute("onmousedown",
+									"javascript:void(0);");
+							ljf('xf_more').setAttribute("onmousedown",
+									"javascript:void(0);");
+						} else { //登录前
+							ljf('xf_title').setAttribute("onmousedown",
+									"javascript:void(0);");
+							ljf('xf_more').setAttribute("onmousedown",
+									"javascript:void(0);");
+						}
+					}
+					//展示晒幸福的数据
+					function show_shaixingfu() {
+						//获取晒幸福数据
+						var arr = new Array;
+						var flag = new Array;
+						//设置导航分类标签
+						for ( var ikey in XF_data) {
+							for ( var xf_key in XF_data[ikey]) {
+								ljf('tablink' + ikey).innerHTML = XF_data[ikey]['name']; //设置标签
+							}
+						}
+						//获取第一组数据
+						get_xingfu_datas(0);
+						//切换统计标识
+						set_xf_total_tag(JY.login.getUser().uid);
+					}
+					//tab 切换特效
+					function easytabs_new(active) {
+						for (i = 0; i <= 3; i++) {
+							ljf('tablink' + i).className = 'tab' + i;
+							ljf('tabcontent' + i).style.display = 'none';
+						}
+						ljf('tablink' + active).className = 'tab' + active
+								+ ' tabactive';
+						ljf('tabcontent' + active).style.display = 'block';
+						get_xingfu_datas(active);
+
+						xf_tips();
+					}
+					//获取成功故事数据填充页面
+					function get_xingfu_datas(tab_key) {
+						var xingfu_result = '';
+						for (sub_key in XF_data[tab_key]['data']) {
+							xingfu_result += '<li class="ShadowA bar">';
+							xingfu_result += '	<p class="ShadowA-bg"></p>';
+							if (JY.login.getUser().uid > 0) {
+								xingfu_result += '	<a onmousedown="send_jy_pv2(\'|index2012_xf_link|\');" href="http://love.jiayuan.com/myspace.php?id='
+										+ XF_data[tab_key]['data'][sub_key]['sid']
+										+ '" id="open_pop" target="_blank">';
+							} else {
+								xingfu_result += '	<a href="javascript:show_div(1, '
+										+ XF_data[tab_key]['data'][sub_key]['sid']
+										+ ', \'\');" id="open_pop">';
+							}
+							xingfu_result += '		<img id="xf_pic_'+XF_data[tab_key]['data'][sub_key]['sid']+'" src="'+XF_data[tab_key]['data'][sub_key]['pic_url']+'" alt="" width="120" height="120"/>';
+							xingfu_result += '	</a>';
+							xingfu_result += '	<div class="ShadowA-Hover mosaic-overlay">';
+							xingfu_result += '		<span class="ShadowA-HoverBg"></span>';
+							xingfu_result += '		<div class="ShadowA-Hover-p">';
+							xingfu_result += '			<p>'
+									+ XF_data[tab_key]['data'][sub_key]['love1']
+									+ '&'
+									+ XF_data[tab_key]['data'][sub_key]['love2']
+									+ '</p>';
+							xingfu_result += '			<p class="colorccc">'
+									+ XF_data[tab_key]['data'][sub_key]['love_data']
+									+ '</p>';
+							xingfu_result += '		</div>';
+							xingfu_result += '	</div>';
+							xingfu_result += '</li>';
+						}
+						ljf('tabcontent' + tab_key).innerHTML = xingfu_result; //设置内容
+					}
+					show_shaixingfu(); //调用数据
+
+					//数据加载完后调用mosaic
+					xf_tips();
+				</script>
+				<!-- ==E ShowHappinessArea-->
+				<!--S 搜缘分-->
+				<script type="text/javascript">
+					/*
+					获取数据
+					参数：v=-1,未登录默认搜索,v=UID,登录默认搜索,v=0,手动按条件搜索；p,页码
+					 */
+					//获取晒幸福弹层相关信息
+					function search_info(v, p) {
+						var url = "/dynmatch/ajax/index_new.php";
+						if (v == 0) {
+							url = get_search_url(url, p);
+							set_page_class(p); //设置页码样式
+							show_index_search(0); //显示搜索条件
+						}
+						jQuery
+								.ajax({
+									url : url,
+									type : 'GET',
+									async : false,
+									success : function(data) {
+										var datas = data;
+										var search_result = '';
+										var profile_url = '';
+										var info_target = '';
+										var total_tag = '';
+										var total_tag2 = '';
+										if (datas != '') {
+											var objData = eval("(" + datas
+													+ ")"); //接收返回的数据
+											var right_class = '';
+											for ( var key in objData) {
+												if (key == 9) {
+													right_class = 'FindLover-cnt-block-itemB FindLover-cnt-block-item-last';
+												} else if (key == 8) {
+													right_class = 'FindLover-cnt-block-item-last';
+												} else if (key % 2 != 0) {
+													right_class = 'FindLover-cnt-block-itemB';
+												} else {
+													right_class = '';
+												}
+												if (JY.login.getUser().uid > 0) {
+													profile_url = 'http://www.jiayuan.com/'
+															+ objData[key]['uid_disp'];
+													info_target = 'target="_blank"';
+													total_tag = 'onmousedown="send_jy_pv2(\'|index2012_search_link_'
+															+ objData[key]['sex']
+															+ '|\')"'; //登录后，跳转链接的点击统计
+													total_tag2 = 'onmousedown="send_jy_pv2(\'|index2012_search_service_login|\')"'; //会员用友服务的链接点击统计
+												} else {
+													profile_url = 'javascript:show_div(2, '
+															+ objData[key]['uid_disp']
+															+ ', \''
+															+ objData[key]['sex']
+															+ '\')';
+													total_tag2 = 'onmousedown="send_jy_pv2(\'|index2012_search_service_logout|\')"';
+												}
+												search_result += '<li class="FindLover-cnt-block-item ' + right_class + '">';
+												search_result += '	<div class="ShadowB fn-left">';
+												search_result += '		<p class="ShadowB-bg"></p>';
+												search_result += '		<a ' + total_tag + ' href="' + profile_url + '" ' + info_target + '><img src="' + objData[key]['avatar_url'] + '" alt="" width="90" height="110"/></a>';
+												search_result += '	</div>';
+												search_result += '	<div class="User-data fn-left">';
+												search_result += '		<div class="fn-clear">';
+												search_result += '			<p class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left"><a ' + total_tag + ' href="' + profile_url + '" ' + info_target + '>'
+														+ objData[key]['nickname']
+														+ '</a></p>';
+												search_result += '			<p class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">';
+												if (objData[key]['service']
+														&& objData[key]['service']['url']) {
+													search_result += '			<a ' + total_tag2 + ' href="' + objData[key]['service']['url'] + '" target="_blank"><img src="' + objData[key]['service']['icon'] + '" alt="" width="14" height="14"/></a><a ' + total_tag2 + ' href="' + objData[key]['service']['url'] + '" target="_blank">'
+															+ objData[key]['service']['name']
+															+ '</a>';
+												}
+												search_result += '			</p>';
+												search_result += '		</div>';
+												search_result += '		<p class="Brief-introduction color333">'
+														+ objData[key]['age']
+														+ '，'
+														+ objData[key]['work_location']
+														+ '，'
+														+ objData[key]['height']
+														+ '，';
+												if (objData[key]['education']) {
+													search_result += objData[key]['education']
+															+ '，';
+												}
+												search_result += objData[key]['income']
+														+ '</p>';
+												search_result += '		<p class="Inner-soliloquy color999">'
+														+ objData[key]['shortnote']
+														+ '</p>';
+												search_result += '		<p class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details"><a ' + total_tag + ' href="' + profile_url + '" ' + info_target + '>查看详情>></a></p>';
+												search_result += '	</div>';
+												search_result += '</li>';
+											}
+											ljf('search_result').innerHTML = search_result;
+										}
+									}
+								});
+						set_more_search('http://search.jiayuan.com/');
+					}
+					//获取搜索URL
+					function get_search_url(url, p) {
+						var sex_array = new Array;
+						sex_array['f'] = '女';
+						sex_array['m'] = '男';
+						//获取搜索条件
+						var search_sex = ljf('common_search_bar_sex').value;
+						var search_min_age = ljf('common_search_bar_min_age').value;
+						var search_max_age = ljf('common_search_bar_max_age').value;
+						var search_work_location = ljf('common_search_bar_work_location').value;
+						var search_condition = sex_array[search_sex] + '，';
+						if (search_min_age > search_max_age) {
+							search_condition += search_min_age + '岁以上';
+						} else {
+							search_condition += search_min_age + '-'
+									+ search_max_age + '岁';
+						}
+						//拼Ajax的URL
+						url += '?ss=1';
+						url += '&sex=' + search_sex;
+						url += '&min_age=' + search_min_age;
+						url += '&max_age=' + search_max_age;
+						if (p > 0) {
+							url += '&p=' + p;
+						}
+						if (search_work_location > 0) {
+							url += '&work_location=' + search_work_location;
+							search_condition += '，' + LSK[search_work_location];
+						}
+						ljf('search_condition').innerHTML = '<span>已选条件：</span>'
+								+ search_condition;
+						return url;
+					}
+					//交互展示搜索条和搜索条件
+					function show_index_search(v) {
+						if (v == 0) {
+							ljf('search_bar').style.display = 'none';
+							ljf('search_show').style.display = '';
+						} else {
+							ljf('search_show').style.display = 'none';
+							ljf('search_bar').style.display = '';
+						}
+					}
+					//设置页码特效
+					function set_page_class(page) {
+						if (page == 0)
+							page = 1;
+						for (i = 1; i <= 3; i++) {
+							ljf('search_page_' + i).className = '';
+						}
+						ljf('search_page_' + page).className = 'ui-page-IndexSearch-item-currnet';
+					}
+					//设置更多搜索链接
+					function set_more_search(url) {
+						ljf('more_search').href = get_search_url(url, 0);
+					}
+					//设置搜缘分统计标签
+					function set_search_tag_total() {
+						if (JY.login.getUser().uid > 0) {
+							ljf('search_title')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_title_login|');");
+							ljf('search_btn')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_btn_login|');");
+							ljf('search_adv')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_adv_login|');");
+							ljf('search_mdy')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_mdy_login|');");
+							ljf('more_search')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_more_login|');");
+							ljf('search_p1')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_p1_login|');");
+							ljf('search_p2')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_p2_login|');");
+							ljf('search_p3')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_p3_login|');");
+						} else {
+							ljf('search_title')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_title_logout|');");
+							ljf('search_btn')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_btn_logout|');");
+							ljf('search_adv')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_adv_logout|');");
+							ljf('search_mdy')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_mdy_logout|');");
+							ljf('more_search')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_more_logout|');");
+							ljf('search_p1')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_p1_logout|');");
+							ljf('search_p2')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_p2_logout|');");
+							ljf('search_p3')
+									.setAttribute("onmousedown",
+											"javascript:send_jy_pv2('|index2012_search_p3_logout|');");
+						}
+					}
+				</script>
+				<!--S 搜缘分-->
+
+				<div class="FindLoverArea">
+					<form id="common_search_bar_form" method="post"
+						action="http://search.jiayuan.com/">
+						<div class="IndexCommonTitle">
+							<h2 class="ui-link-333toE7417F fn-left ui-link-Nounderline">
+								<a onmousedown="javascript:void(0);" id="search_title" href="#"
+									target="_top">搜缘分，就在眼前</a>
+							</h2>
+							<!-- 修改开始 -->
+							<div id="search_bar">
+								<ul class="IndexSearch fn-left">
+									<li>我要找 <select name="sex" id="common_search_bar_sex"><option
+												value="f">女</option>
+											<option value="m">男</option></select>
+									</li>
+									<li>年龄 <select name="min_age"
+										id="common_search_bar_min_age"><option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+											<option value="32">32</option>
+											<option value="33">33</option>
+											<option value="34">34</option>
+											<option value="35">35</option>
+											<option value="36">36</option>
+											<option value="37">37</option>
+											<option value="38">38</option>
+											<option value="39">39</option>
+											<option value="40">40</option>
+											<option value="41">41</option>
+											<option value="42">42</option>
+											<option value="43">43</option>
+											<option value="44">44</option>
+											<option value="45">45</option>
+											<option value="46">46</option>
+											<option value="47">47</option>
+											<option value="48">48</option>
+											<option value="49">49</option>
+											<option value="50">50</option>
+											<option value="51">51</option>
+											<option value="52">52</option>
+											<option value="53">53</option>
+											<option value="54">54</option>
+											<option value="55">55</option>
+											<option value="56">56</option>
+											<option value="57">57</option>
+											<option value="58">58</option>
+											<option value="59">59</option>
+											<option value="60">60</option>
+											<option value="61">61</option>
+											<option value="62">62</option>
+											<option value="63">63</option>
+											<option value="64">64</option>
+											<option value="65">65</option>
+											<option value="66">66</option>
+											<option value="67">67</option>
+											<option value="68">68</option>
+											<option value="69">69</option>
+											<option value="70">70</option>
+											<option value="71">71</option>
+											<option value="72">72</option>
+											<option value="73">73</option>
+											<option value="74">74</option>
+											<option value="75">75</option>
+											<option value="76">76</option>
+											<option value="77">77</option>
+											<option value="78">78</option>
+											<option value="79">79</option>
+											<option value="80">80</option>
+											<option value="81">81</option>
+											<option value="82">82</option>
+											<option value="83">83</option>
+											<option value="84">84</option>
+											<option value="85">85</option>
+											<option value="86">86</option>
+											<option value="87">87</option>
+											<option value="88">88</option>
+											<option value="89">89</option>
+											<option value="90">90</option>
+											<option value="91">91</option>
+											<option value="92">92</option>
+											<option value="93">93</option>
+											<option value="94">94</option>
+											<option value="95">95</option>
+											<option value="96">96</option>
+											<option value="97">97</option>
+											<option value="98">98</option>
+											<option value="99">99</option></select>-<select name="max_age"
+										id="common_search_bar_max_age"><option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+											<option value="32">32</option>
+											<option value="33">33</option>
+											<option value="34">34</option>
+											<option value="35">35</option>
+											<option value="36">36</option>
+											<option value="37">37</option>
+											<option value="38">38</option>
+											<option value="39">39</option>
+											<option value="40">40</option>
+											<option value="41">41</option>
+											<option value="42">42</option>
+											<option value="43">43</option>
+											<option value="44">44</option>
+											<option value="45">45</option>
+											<option value="46">46</option>
+											<option value="47">47</option>
+											<option value="48">48</option>
+											<option value="49">49</option>
+											<option value="50">50</option>
+											<option value="51">51</option>
+											<option value="52">52</option>
+											<option value="53">53</option>
+											<option value="54">54</option>
+											<option value="55">55</option>
+											<option value="56">56</option>
+											<option value="57">57</option>
+											<option value="58">58</option>
+											<option value="59">59</option>
+											<option value="60">60</option>
+											<option value="61">61</option>
+											<option value="62">62</option>
+											<option value="63">63</option>
+											<option value="64">64</option>
+											<option value="65">65</option>
+											<option value="66">66</option>
+											<option value="67">67</option>
+											<option value="68">68</option>
+											<option value="69">69</option>
+											<option value="70">70</option>
+											<option value="71">71</option>
+											<option value="72">72</option>
+											<option value="73">73</option>
+											<option value="74">74</option>
+											<option value="75">75</option>
+											<option value="76">76</option>
+											<option value="77">77</option>
+											<option value="78">78</option>
+											<option value="79">79</option>
+											<option value="80">80</option>
+											<option value="81">81</option>
+											<option value="82">82</option>
+											<option value="83">83</option>
+											<option value="84">84</option>
+											<option value="85">85</option>
+											<option value="86">86</option>
+											<option value="87">87</option>
+											<option value="88">88</option>
+											<option value="89">89</option>
+											<option value="90">90</option>
+											<option value="91">91</option>
+											<option value="92">92</option>
+											<option value="93">93</option>
+											<option value="94">94</option>
+											<option value="95">95</option>
+											<option value="96">96</option>
+											<option value="97">97</option>
+											<option value="98">98</option>
+											<option value="99">99</option></select>岁
+									</li>
+									<li>地区 <select name="work_location"
+										id="common_search_bar_work_location"><option
+												value="0">--不限--</option>
+											<option value="11">北京</option>
+											<option value="12">天津</option>
+											<option value="13">河北</option>
+											<option value="14">山西</option>
+											<option value="15">内蒙古</option>
+											<option value="21">辽宁</option>
+											<option value="22">吉林</option>
+											<option value="23">黑龙江</option>
+											<option value="31">上海</option>
+											<option value="32">江苏</option>
+											<option value="33">浙江</option>
+											<option value="34">安徽</option>
+											<option value="35">福建</option>
+											<option value="36">江西</option>
+											<option value="37">山东</option>
+											<option value="41">河南</option>
+											<option value="42">湖北</option>
+											<option value="43">湖南</option>
+											<option value="44">广东</option>
+											<option value="45">广西</option>
+											<option value="46">海南</option>
+											<option value="50">重庆</option>
+											<option value="51">四川</option>
+											<option value="52">贵州</option>
+											<option value="53">云南</option>
+											<option value="54">西藏</option>
+											<option value="61">陕西</option>
+											<option value="62">甘肃</option>
+											<option value="63">青海</option>
+											<option value="64">宁夏</option>
+											<option value="65">新疆</option>
+											<option value="71">台湾</option>
+											<option value="81">香港</option>
+											<option value="82">澳门</option>
+											<option value="83">钓鱼岛</option>
+											<option value="99">国外</option></select>
+									</li>
+									<li class="FindLover-btn"><a
+										onmousedown="javascript:void(0);" id="search_btn"
+										href="javascript:void(0);" onclick="javascript:void(0);">搜索</a></li>
+								</ul>
+								<span
+									class="more Indexmore ui-link-underline ui-link-2C81D6toE7417F fn-right"><a
+									onmousedown="javascript:void(0);" id="search_adv" href="#"
+									target="_top">高级搜索&gt;&gt;</a></span>
+							</div>
+							<!-- 修改结束 -->
+							<!-- 修改开始 -->
+							<div id="search_show" style="display: none;">
+								<ul class="IndexSearch fn-left">
+									<li id="search_condition"><span>已选条件：</span>女，18-18岁</li>
+									<li
+										class="FindLover-Modify ui-link-2C81D6toE7417F ui-link-underline"><a
+										onmousedown="javascript:void(0);" id="search_mdy"
+										href="javascript:" onclick="javascript:void(0);">[修改]</a></li>
+								</ul>
+								<ul class="more Indexmore fn-right ui-page-IndexSearch">
+									<li id="search_page_1" class="ui-page-IndexSearch-item-currnet"><a
+										onmousedown="javascript:void(0);" id="search_p1"
+										href="javascript:" onclick="search_info(0, 1);">1</a></li>
+									<li id="search_page_2"><a
+										onmousedown="javascript:void(0);" id="search_p2"
+										href="javascript:" onclick="search_info(0, 2);">2</a></li>
+									<li id="search_page_3"><a
+										onmousedown="javascript:void(0);" id="search_p3"
+										href="javascript:" onclick="search_info(0, 3);">3</a></li>
+									<li class="ui-page-fate"><a
+										onmousedown="javascript:void(0);" id="more_search" href="#"
+										target="_top">更多缘分</a></li>
+								</ul>
+							</div>
+							<!-- 修改结束 -->
+						</div>
+					</form>
+
+
+					<div class="FindLover-cnt">
+						<div class="fn-clear">
+							<!--搜索结果-->
+							<ul class="FindLover-cnt-allul" id="search_result">
+								<li class="FindLover-cnt-block-item ">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">淡然</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">23岁，湖北，166cm，本科，2000～5000元</p>
+										<p class="Inner-soliloquy color999">幸福就是在青春最美丽的年华遇到了你！...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item FindLover-cnt-block-itemB">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">小王</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">26岁，湖北，165cm，大专，5000～10000元</p>
+										<p class="Inner-soliloquy color999">我是个积极向上的人，有耐心、有自制力，性格...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item ">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">心岛</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">26岁，湖北，163cm，本科，2000～5000元</p>
+										<p class="Inner-soliloquy color999">我喜欢绘画
+											。我在业余时间最大的消遣是旅游...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item FindLover-cnt-block-itemB">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">刘飞</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">27岁，湖北，176cm，大专，10000～20000元</p>
+										<p class="Inner-soliloquy color999">想找个对眼，，对心的..............</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item ">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">筱静</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">25岁，湖北，162cm，中专或相当学历，2000～5000元</p>
+										<p class="Inner-soliloquy color999">我是性格开朗的人
+											，有点好强，但是对待工作...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item FindLover-cnt-block-itemB">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">新一代民工</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">31岁，湖北，175cm，本科，2000～5000元</p>
+										<p class="Inner-soliloquy color999">我不是一个很懂生活的男人，所以想找一个很懂...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item ">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">奕雪</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">25岁，湖北，165cm，中专或相当学历，2000～5000元</p>
+										<p class="Inner-soliloquy color999">我喜欢旅游。我在业余时间最大的消遣是看电影...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li class="FindLover-cnt-block-item FindLover-cnt-block-itemB">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">大海之舟</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+												<a onmousedown="javascript:void(0);" href="#" target="_top"><img
+													src="images/mobile_icon.png" alt="" height="14" width="14" /></a><a
+													onmousedown="javascript:void(0);" href="#" target="_top">手机来信提醒</a>
+											</p>
+										</div>
+										<p class="Brief-introduction color333">30岁，湖北，175cm，中专或相当学历，2000～5000元</p>
+										<p class="Inner-soliloquy color999">人生就如同大海，时而平静，时而澎湃。我们就...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li
+									class="FindLover-cnt-block-item FindLover-cnt-block-item-last">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">红</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">23岁，湖北，158cm，中专或相当学历，2000元以下</p>
+										<p class="Inner-soliloquy color999">
+											爱一个人意味着什么呢？这意味着为他的幸...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+								<li
+									class="FindLover-cnt-block-item FindLover-cnt-block-itemB FindLover-cnt-block-item-last">
+									<div class="ShadowB fn-left">
+										<p class="ShadowB-bg"></p>
+										<a href="javascript:void(0);"><img src="images/90x110.jpg"
+											alt="" height="110" width="90" /></a>
+									</div>
+									<div class="User-data fn-left">
+										<div class="fn-clear">
+											<p
+												class="User-name ui-link-Nounderline ui-link-E7417FtoE7417F fn-left">
+												<a href="javascript:void(0);">风</a>
+											</p>
+											<p
+												class="ui-link-999toE7417F ui-link-underline fn-right DiamondsMember">
+											</p>
+										</div>
+										<p class="Brief-introduction color333">25岁，湖北，176cm，大专，2000～5000元</p>
+										<p class="Inner-soliloquy color999">生命中，不断的有人离开或进入，看见的、看不...</p>
+										<p
+											class="fn-right ui-link-underline ui-link-2C81D6toE7417F View-details">
+											<a href="javascript:void(0);">查看详情&gt;&gt;</a>
+										</p>
+									</div>
+								</li>
+							</ul>
+
+							<!--搜索结果-->
+						</div>
+						<!-- 登录前  star-->
+						<div id="email_form" class="Subscribe" style="">
+							<input id="email" class="ui-input-email" value="填写 E-mail"
+								onfocus="if(value=='填写 E-mail') {value=''}"
+								onblur="if (value=='') {value='填写 E-mail'}" type="text" />
+							<p class="Subscribe-btn">
+								<a href="javascript:void(0);" onclick="javascript:void(0);">订阅你的缘分</a>
+							</p>
+						</div>
+						<!-- 登录前  end-->
+						<!-- 订阅成功  star-->
+						<div id="email_suc" class="Subscribe Subscribe-b color2C81D6"
+							style="display: none;">订阅成功</div>
+						<!-- 订阅成功  end-->
+						<!-- 登录后  star-->
+						<div id="email_login" class="Subscribe Subscribe-c"
+							style="display: none;"></div>
+						<!-- 登录后  end-->
+
+					</div>
+				</div>
+				<!--E 搜缘分-->
+			</div>
+			<!-- =E Indexleft-->
+			<!-- =S Indexright-->
+			<div class="fn-right">
+				<!-- 登录后  star-->
+				<!-- ==S MeetLove-->
+				<div id="service_list_common" class="MeetLove"
+					style="display: none;">
+					<div class="IndexCommonTitle fn-clear">
+						<h2 class="ui-link-333toE7417F fn-left ui-link-Nounderline">
+							<a onmousedown="javascript:void(0);" href="#" target="_top">峰哥帮你遇见爱</a>
+						</h2>
+						<span
+							class="more Indexmore ui-link-underline ui-link-2C81D6toE7417F fn-right"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">更多&gt;&gt;</a></span>
+					</div>
+					<div class="MeetLove-block">
+						<div class="JY-stamp">
+							<span class="MeetLove-blockIcon"><a
+								onmousedown="javascript:void(0);" href="#" target="_top">一线牵邮票</a></span>
+							<h3 class="ui-link-underline">
+								<a onmousedown="javascript:void(0);" href="#" target="_top"
+									class="colorE7417F">一线牵邮票&gt;&gt;</a>
+							</h3>
+							<ul>
+								<li class="color666">看信仅需一张一线牵邮票</li>
+								<li class="color666">一线牵通用货币</li>
+							</ul>
+						</div>
+					</div>
+					<div class="MeetLove-block">
+						<div class="Diamonds-member">
+							<span class="MeetLove-blockIcon"><a
+								onmousedown="javascript:void(0);" href="#" target="_top">钻石会员</a></span>
+							<h3 class="ui-link-underline">
+								<a onmousedown="javascript:void(0);" href="#" target="_top"
+									class="colorE7417F">钻石会员&gt;&gt;</a>
+							</h3>
+							<ul>
+								<li class="color666">看信、发信全部免费</li>
+								<li class="color666">个人资料页面优先强力展示</li>
+							</ul>
+						</div>
+					</div>
+					<div class="MeetLove-block MeetLove-block-last">
+						<div class="VIP-member">
+							<span class="MeetLove-blockIcon"><a
+								onmousedown="javascript:void(0);" href="#" target="_top">vip会员</a></span>
+							<h3 class="ui-link-underline">
+								<a onmousedown="javascript:void(0);" href="#" target="_top"
+									class="colorE7417F">vip会员&gt;&gt;</a>
+							</h3>
+							<ul>
+								<li class="color666">谁看过我，掌握谁对我钟情</li>
+								<li class="color666">特14项特权，包月仅16元/月</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ==E MeetLove-->
+				<!-- 登录后  end-->
+				<!-- 登录前  star-->
+				<!-- ==S XlnArea-->
+				<div id="long_before" class="XlnArea" style="">
+					<div class="IndexCommonTitle fn-clear">
+						<h2 class="ui-link-333toE7417F fn-left ui-link-Nounderline">
+							<a onmousedown="javascript:void(0);" href="#" target="_top">峰哥传奇人生</a>
+						</h2>
+						<span
+							class="more Indexmore ui-link-underline ui-link-2C81D6toE7417F fn-right"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">更多&gt;&gt;</a></span>
+					</div>
+					<p class="XlnImg">
+						<a onmousedown="javascript:void(0);" href="#" target="_top"><img
+							src="images/index_img02.jpg" alt="" height="70" width="248" /></a>
+					</p>
+					<ul class="Xln-ul">
+						<li class="ui-link-Nounderline ui-link-999toE7417F"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">非诚勿扰史上最出人意料牵手
+								一线牵爆灯姐下嫁空调师傅</a></li>
+						<li class="ui-link-Nounderline ui-link-999toE7417F"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">一线牵成功会员支招：网络交友，态度决定成败</a></li>
+					</ul>
+				</div>
+				<!-- ==E XlnArea-->
+				<!-- 登录前  end-->
+				<!--S 峰哥为爱护航-->
+				<div class="Love-escortArea">
+					<div class="IndexCommonTitle fn-clear">
+						<h2 class="ui-link-333toE7417F fn-left ui-link-Nounderline">
+							<b>峰哥为爱护航</b>
+						</h2>
+					</div>
+					<div class="Love-escor">
+						<span class="Love-escorIcon"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">认证</a></span>
+						<h3 class="ui-link-333toE7417F">
+							<a onmousedown="javascript:void(0);" href="#" target="_top"
+								class="color333">7种安全认证保护你&gt;&gt;</a>
+						</h3>
+						<p class="color999">一线牵推出“免费身份认证”服务...</p>
+					</div>
+					<div class="Love-escor Love-escor-bgb">
+						<span class="Love-escorIcon"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">安全</a></span>
+						<h3 class="ui-link-333toE7417F">
+							<a onmousedown="javascript:void(0);" href="#" target="_top"
+								class="color333">峰哥安全提示&gt;&gt;</a>
+						</h3>
+						<p class="color999">诱使会员与其见面，随后将会员带至...</p>
+					</div>
+					<div class="Love-escor Love-escor-bgc">
+						<span class="Love-escorIcon"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">秘笈</a></span>
+						<h3 class="ui-link-333toE7417F">
+							<a onmousedown="javascript:void(0);" href="#" target="_top"
+								class="color333">峰哥交友秘籍&gt;&gt;</a>
+						</h3>
+						<p class="color999">在准备、寻觅、到约会、恋爱、结婚...</p>
+					</div>
+				</div>
+				<!--E 峰哥为爱护航-->
+				<!--广告-->
+				<div class="IndexAd">
+					<div id="ad_pos_34">
+						<div id="jy_ad_119">
+							<ul style="font-size: 0px;">
+								<li style="display: block;"><a href="#" target="_top"><img
+										src="images/20130729023132711.jpg" alt="" /></a></li>
+								<li style="display: none;"><a href="#" target="_top"><img
+										src="images/20130729023147181.gif" alt="" /></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--广告-->
+				<!--S 媒体节目-->
+				<div class="MediaArea">
+					<div class="IndexCommonTitle fn-clear">
+						<h2 class="ui-link-333toE7417F fn-left ui-link-Nounderline">
+							<a onmousedown="javascript:void(0);" href="#" target="_top">媒体节目</a>
+						</h2>
+						<span
+							class="more Indexmore ui-link-underline ui-link-2C81D6toE7417F fn-right"><a
+							onmousedown="javascript:void(0);" href="#" target="_top">更多&gt;&gt;</a></span>
+					</div>
+					<div id="ifocus">
+						<div id="ifocus_pic">
+							<div style="top: -168px;" id="ifocus_piclist">
+								<ul id="video_img">
+									<li><a onmousedown="javascript:void(0);" href="#"
+										target="_top"><img src="images/20121114105052518.jpg"
+											alt="" height="170" width="248" /></a></li>
+									<li><a onmousedown="javascript:void(0);" href="#"
+										target="_top"><img src="images/20130307052030231.jpg"
+											alt="" height="170" width="248" /></a></li>
+									<li><a onmousedown="javascript:void(0);" href="#"
+										target="_top"><img src="images/20130614020329816.jpg"
+											alt="" height="170" width="248" /></a></li>
+									<li><a onmousedown="javascript:void(0);" href="#"
+										target="_top"><img src="images/20121114105052518.jpg"
+											alt="" height="170" width="248" /></a></li>
+									<li><a onmousedown="javascript:void(0);" href="#"
+										target="_top"><img src="images/20130307052030231.jpg"
+											alt="" height="170" width="248" /></a></li>
+									<li><a onmousedown="javascript:void(0);" href="#"
+										target="_top"><img src="images/20130614020329816.jpg"
+											alt="" height="170" width="248" /></a></li>
+								</ul>
+							</div>
+							<div id="ifocus_opdiv"></div>
+							<div id="ifocus_tx">
+								<ul id="video_txt">
+									<li class="normal">我们约会吧</li>
+									<li class="current">转身遇到TA</li>
+									<li class="normal">非诚勿扰</li>
+								</ul>
+							</div>
+
+							<div id="ifocus_btn">
+								<ul>
+									<li class="normal">1</li>
+									<li class="current">2</li>
+									<li class="normal">3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--E 媒体节目-->
+				<!-- 登录前  star-->
+				<div id="index_ad_before" class="IndexAd" style="">
+					<div id="ad_pos_35">
+						<div id="jy_ad_120">
+							<ul style="font-size: 0px;">
+								<li style="display: none;"><a href="#" target="_top"><img
+										src="images/20130729024859870.png" alt="" /></a></li>
+								<li style="display: block;"><a href="#" target="_top"><img
+										src="images/20130729024916249.jpg" alt="" /></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 登录前  end-->
+
+				<!--S 关注-->
+				<div class="Attention">
+					<span>关注：</span>
+					<p id="guanzhu">
+						<a target="_top" href="#" onmousedown="javascript:void(0);"><img
+							alt="新浪微博" src="images/sina_img.gif" height="20" width="20" /></a><a
+							target="_top" href="#" onmousedown="javascript:void(0);"><img
+							alt="腾讯微博" src="images/qqwb_img.gif" height="20" width="20" /></a><a
+							target="_top" href="#" onmousedown="javascript:void(0);"><img
+							alt="网易微博" src="images/douban_img.gif" height="20" width="20" /></a><a
+							target="_top" href="#" onmousedown="javascript:void(0);"><img
+							alt="搜狐微博" src="images/qqkj_img.gif" height="20" width="20" /></a><a
+							target="_top" href="#" onmousedown="javascript:void(0);"><img
+							alt="开心网" src="images/kaixin_img.gif" height="20" width="20" /></a><a
+							target="_top" href="#" onmousedown="javascript:void(0);"><img
+							alt="人人网" src="images/renren_img.gif" height="20" width="20" /></a>
+					</p>
+				</div>
+
+				<!--E 关注-->
+			</div>
+			<!-- =E Indexright-->
+		</div>
+		<!--底通广告1-->
+		<div class="IndexAd">
+			<div id="ad_pos_33">
+				<div style="overflow: hidden;" id="jy_advert_118">
+					<a href="#" target="_top"><img
+						src="images/20130729022437240.jpg" id="jy_advert_118_img"
+						height="90" width="970" /></a>
+				</div>
+			</div>
+		</div>
+		<!--底通广告1-->
+		<!--S IndexBottom-->
+		<div class="IndexBottom">
+			<dl class="IndexBottom-help">
+				<dt class="color333">新手上路</dt>
+				<dd>
+					<span class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">如何注册</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">新手上路</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">获赠邮票</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">购买服务</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">邮票规则</a></span>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="color333">一线牵服务</dt>
+				<dd>
+					<span class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">线上服务</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">手机一线牵</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">交友活动</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">红娘一对一</a></span>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="color333">帮助中心</dt>
+				<dd>
+					<span class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">使用指南</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">支付方式</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">常见问题</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">联系客服</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">技术支持</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">网站地图</a></span>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="color333">对外商务合作</dt>
+				<dd>
+					<span class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">媒体节目合作</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">企业交友专场</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">无线业务合作</a></span>
+				</dd>
+			</dl>
+			<dl class="aboutjy">
+				<dt class="color333">关于一线牵</dt>
+				<dd>
+					<span class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">一线牵动态</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">一线牵介绍</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">创始人峰哥</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">招聘信息</a></span> <span
+						class="ui-link-Nounderline ui-link-999toE7417F"><a
+						onmousedown="javascript:void(0);" class="color999" href="#"
+						target="_top">媒体联系方式</a></span>
+				</dd>
+			</dl>
+		</div>
+		<!--E IndexBottom-->
+	</div>
+	<!--E Indexcontent-->
+
+	<!--统计标识的处理-->
+
+	<!--统计标识的处理-->
+	<!--S Footer-->
+
+	<!--注册弹窗，开始-->
+
+
+	<!--注册弹窗，结束-->
+
+	<!--版权 开始-->
+
+	<div class="hf_wapper">
+		<div class="hf_foot" id="common_footer">
+			<p id="bottom_nav_link">
+				<a href="http://www.jiayuan.com/helpcenter/postmail.php"
+					target="_top">联系客服</a><a href="#" target="_top">关于我们</a><a href="#"
+					target="_top">Investor Relations</a><a href="#" target="_top">联系我们</a><a
+					href="#" target="_top">无线业务</a><a href="#" target="_top">注册条款</a><a
+					href="#" target="_top">友情链接</a><a href="#" target="_top">招聘信息</a><a
+					href="#" target="_top">交友信息</a><a href="#" target="_top">隐私保护</a><a
+					href="#" target="_top">帮助中心</a><a href="#" target="_top">安全中心</a><a
+					href="#" target="_top">手机版</a><a href="#" target="_top">客户端</a>
+			</p>
+			<p id="bottom_site_copyright" style="">
+				<a class="bot_link_none">中文实名：一线牵</a> <a class="bot_link_none">ICP证书：鄂B2-20100074</a>
+				<a href="#" target="_top">增值电信业务经营许可证：鄂B2-20070313</a> <a href="#"
+					target="_top">ISO9001质量体系认证</a> <a href="#" target="_top">鄂网文[2012]0720-106号</a>
+			</p>
+			<p>
+				©&nbsp;&nbsp;2013-2013&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;鄂公网安备110105002124号
+			</p>
+			<div id="page_bottom_info"
+				style="text-align: center; margin-bottom: 10px;">
+				<div style="text-align: center;">
+					<a href="#" target="_top"><img src="images/icon_sh.gif"
+						border="0" /></a>
+				</div>
+			</div>
+			<img src="images/a.gif" style="display: none;" />
+			<!-- End comScore Tag -->
+		</div>
+	</div>
+
+	<!-- released time 2013-07-15 11:04:40 -->
+
+
+
+	<!--版权 结束-->
+	<!--E Footer-->
+	<div
+		style="display: none; position: absolute; z-index: 99999999; top: 200px; left: 453px;"
+		id="pop_login_div_index">
+		<iframe src="web/index_3.html" name="login_run" style="display: none;"
+			height="0" width="0"></iframe>
+		<div>
+			<div class="alert_bg2">
+				<div class="clear text_pop_login">
+					<a href="#" onclick="javascript:void(0);" class="closer"></a>
+				</div>
+				<div class="alert_left">
+					<div class="text_pop_login" style="padding: 0px; height: 40px;">
+						<div class="no_reg">老会员登录</div>
+					</div>
+					<p style="display: none;" id="errorInfo_new" class="red"></p>
+					<form name="loginForm" id="loginForm_new" method="post" action="#"
+						target="login_run">
+						<dl class="login_box clear">
+							<dt>登录帐号：</dt>
+							<dd style="width: 160px;">
+								<input value="" id="login_email_new" onblur="check_text(this);"
+									onfocus="javascript:void(0);"
+									onkeydown="if(event.keyCode==9){document.getElementById('login_password_new').focus(); return false;}"
+									onkeyup="loginPopup.onkeyupName(event);" name="name"
+									class="texts" style="width: 150px;" type="text" />
+							</dd>
+							<dt>
+								密<font color="white">密码</font>码：
+							</dt>
+							<dd style="width: 160px;">
+								<input name="password" id="login_password_new"
+									onkeydown="if(event.keyCode==9){document.getElementById('on_submit_new').focus();return false;}"
+									onkeyup="loginPopup.onkeyupPass(event);" class="texts"
+									style="width: 150px;" type="password" />
+							</dd>
+							<dt></dt>
+							<dd style="width: 160px;">
+								<span class="check_g"><input name="remem_pass"
+									id="check_save" checked="checked" type="checkbox" /></span> <span
+									class="gray">记住我的登录帐号</span>
+							</dd>
+							<dt></dt>
+							<dd style="width: 160px; padding: 5px 0px;">
+								<input class="login_btn" id="on_submit_new"
+									onclick="javascript:void(0);" type="button" /><br /> <span
+									class="forget_pw"><a target="_top" href="#">忘记密码</a></span>
+							</dd>
+						</dl>
+						<input id="ajax" name="ajaxsubmit" value="1" type="hidden" /><input
+							name="ljg_login" value="1" type="hidden" />
+					</form>
+				</div>
+				<div class="alert_right">
+					<div class="text_pop_login"
+						style="padding: 0px 0px 0px 26px; height: 40px;">
+						<div class="no_reg">新会员注册</div>
+					</div>
+					<a target="_top" href="#" onclick="javascript:void(0);"
+						class="reg_bg">立即注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

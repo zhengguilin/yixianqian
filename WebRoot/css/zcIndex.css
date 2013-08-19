@@ -1,0 +1,146 @@
+/* ::::: http://images1.jyimg.com/w4/register/c/reg20120919.css ::::: */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, input, em, img, dl, dt, dd, ol, ul, li, form, label, table, tr, th, td { margin: 0px; padding: 0px; border: 0px none; font-size: 12px; }
+input { font: 12px/1.5em Verdana,"Lucida Grande",Arial,Helvetica,sans-serif; }
+body { color: rgb(0, 0, 0); background: url('../images/zc/bg.jpg') repeat scroll left top transparent; text-align: center; }
+ol, ul, li { list-style: none outside none; }
+.clear {  }
+.clear:after { display: block; content: "."; overflow: hidden; clear: both; height: 0px; line-height: 0; font-size: 1px; visibility: hidden; }
+.f_l { float: left; }
+a { color: rgb(0, 99, 220); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.btn_BG { background: url('../images/zc/btn_bg.png') no-repeat scroll 0% 0% transparent; }
+a.btn_YZM { display: inline-block; width: 158px; height: 27px; line-height: 27px; font-size: 14px; color: rgb(102, 102, 102); text-align: center; float: left; background-position: -160px -324px; }
+a.btn_YZM:hover { background-position: -328px -324px; text-decoration: none; }
+p.p_txt01 { line-height: 18px; color: rgb(0, 0, 0); }
+p.p_txt01 span { color: rgb(153, 153, 153); }
+.box { width: 920px; margin: 0px auto; text-align: left; position: relative; }
+.foot_bg { padding: 30px 0px; color: rgb(51, 51, 51); text-align: center; }
+.head { height: 58px; background: none repeat scroll 0% 0% rgb(240, 59, 110); position: relative; z-index: 999; }
+.head div.box { width: 920px; height: 58px; margin: 0px auto; text-align: left; position: relative; }
+.box div.box_logo_01 { position: absolute; top: -1px; left: 8px; width: 382px; height: 60px; }
+.box div.box_img_02 { position: absolute; top: 0px; right: 5px; width: 340px; height: 96px; }
+.reg_left { width: 279px; float: left; }
+.reg_right { width: 641px; float: left; background: url('../images/zc/right_bg.jpg') repeat-y scroll left center transparent; }
+.left_img1 { width: 70px; height: 129px; position: absolute; left: -62px; top: 202px; background: url('../images/zc/img_l.jpg') no-repeat scroll left top transparent; }
+.left_img2 { width: 59px; height: 122px; position: absolute; left: 271px; top: 334px; background: url('../images/zc/img_r.jpg') no-repeat scroll left top transparent; }
+.left_img3 { width: 297px; height: 412px; position: absolute; left: -18px; top: 717px; background: url('../images/zc/left_img.jpg') no-repeat scroll left top transparent; }
+.left_t { height: 177px; background: url('../images/zc/left_top.jpg') no-repeat scroll left top transparent; position: relative; }
+.left_m { height: 308px; background: url('../images/zc/left_mid_v2.png') no-repeat scroll left top transparent; }
+.left_b { height: 125px; background: url('../images/zc/left_bottom.png') no-repeat scroll left top transparent; }
+.left_t h1 { width: 279px; text-indent: -999px; overflow: hidden; }
+.ask_list { padding: 10px 0px 0px 74px; text-align: left; }
+.ask_list li { height: 32px; padding-top: 46px; color: rgb(102, 102, 102); }
+.ask_list li strong { color: rgb(185, 133, 52); }
+.jy_logo { display: block; width: 150px; height: 69px; position: absolute; top: -9px; left: 65px; }
+.reg_inner { padding: 50px 35px 100px; background: url('../images/zc/right_bom.jpg') no-repeat scroll left bottom transparent; }
+.reg_h1 { height: 33px; width: 252px; background: url('../images/zc/reg_h1.png') no-repeat scroll 0px 5px transparent; float: left; text-indent: -999px; }
+.qy_btn { display: block; float: right; width: 130px; margin-top: 10px; overflow: hidden; }
+.reg_text { height: 1px; line-height: 0; font-size: 0px; background-color: rgb(233, 233, 233); margin: 10px 0px; overflow: hidden; }
+.reg_table td { line-height: 40px; color: rgb(51, 51, 51); font-size: 14px; }
+.reg_table td.font14 { font-size: 14px; }
+.reg_table td span { font-size: 12px; }
+.input_220, .input_g_220, .input_150, .input_g_150, .input_105, .input_g_105, .input_66, .input_g_66, .input_126, .input_g_126 { width: 214px; height: 24px; line-height: 24px; color: rgb(51, 51, 51); background: url('../images/zc/input_220.jpg') no-repeat scroll left top transparent; padding: 3px; }
+.input_150 { width: 144px; background: url('../images/zc/input_150.jpg') no-repeat scroll left top transparent; }
+.input_105 { width: 99px; background: url('../images/zc/input_105.jpg') no-repeat scroll left top transparent; }
+.reg_table td .radios { margin-right: 5px; vertical-align: text-bottom; }
+.checkbox { margin-right: 5px; margin-top: 8px; vertical-align: text-bottom; }
+.reg_table td .span_r { padding-right: 10px; display: inline-block; line-height: 20px; }
+.reg_table td .span_s { padding-top: 8px; line-height: 20px; display: inline-block; }
+.input_list { width: 90px; height: 19px; line-height: 19px; margin-right: 2px; font-size: 12px; margin-top: 5px; }
+.w_110 { width: 110px; }
+.next_btn { display: block; width: 308px; height: 45px; line-height: 44px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; font-family: 'microsoft yahei'; background: url('../images/zc/reg_btn.png') no-repeat scroll left top transparent; margin-top: 10px; cursor: pointer; text-shadow: 0px 0px 0px rgb(24, 143, 176); }
+.next_btn:hover { background-position: left bottom; text-decoration: none; }
+.select_SR, .select_SG, .select_DQ { width: 350px; height: 19px; line-height: 19px; position: relative; padding-top: 6px; }
+.select_DQ { width: 260px; }
+.select_SR {  }
+.select_Year, .select_Month, .select_Day, .select_Height, .select_City, .select_City2 { width: 115px; height: 19px; float: left; display: inline; }
+.select_City2 { width: 145px; }
+.input_Year, .input_Month, .input_Day, .input_Height, .input_City, .input_City2 { width: 88px; height: 17px; text-align: center; line-height: 17px; border: 1px solid rgb(171, 173, 179); background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(0, 0, 0); }
+.select_Year {  }
+.select_Month {  }
+.select_Day {  }
+.year_Iframe, .height_Iframe, .city_Iframe, .city2_Iframe { border: medium none; position: absolute; z-index: -1; width: 435px; height: 0px; top: 0px; left: 0px; background: none repeat scroll 0% 0% rgb(255, 253, 246); }
+.year_Iframe { height: 218px; width: 435px; }
+.city_Iframe { width: 380px; height: 170px; }
+.city2_Iframe {  }
+.year_List, .month_List, .day_List, .height_List, .city_List, .city_List2 { display: none; width: 435px; border: 1px solid rgb(220, 220, 220); position: absolute; background: none repeat scroll 0% 0% rgb(255, 253, 246); z-index: 999; top: 24px; left: 0px; }
+.city_List, .city_List2 { width: 380px; }
+.year_List {  }
+.year_List, .month_List, .day_List, .height_List { padding: 15px 0px; line-height: 22px; }
+.year_List h2, .month_List h2, .day_List h2, .height_List h2, .city_List h2, .city_List2 h2 { font-weight: normal; position: absolute; top: -19px; width: 88px; height: 18px; text-align: center; line-height: 18px; border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(220, 220, 220) rgb(220, 220, 220) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background: none repeat scroll 0% 0% rgb(255, 253, 246); color: rgb(51, 51, 51); }
+.year_List h2, .height_List h2, .city_List h2 { left: -1px; }
+.year_List dl { overflow: hidden; margin-bottom: 5px; }
+.year_List dl dt { display: inline; float: left; font-weight: bold; color: rgb(23, 23, 23); width: 55px; text-align: right; }
+.year_List dl dd { display: inline; float: left; }
+.year_List a, .month_List a, .day_List a, .height_List a, .city_List a, .city_List2 a { color: rgb(23, 23, 23); display: block; float: left; padding: 0px 6px; white-space: nowrap; cursor: pointer; }
+.year_List a.cur, .month_List a.cur, .day_List a.cur, .city_List a.cur, .city_List2 a.cur, .year_List a:hover, .month_List a:hover, .day_List a:hover, .height_List a:hover, .city_List a:hover, .city_List2 a:hover { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(227, 78, 136); text-decoration: none; }
+.month_List {  }
+.month_List h2, .city_List2 h2 { left: 114px; }
+.month_List p { padding: 0px 20px; }
+.day_List {  }
+.day_List h2 { left: 229px; }
+.day_List p { padding: 0px 12px; }
+.day_List p a { margin-bottom: 5px; }
+.city_List, .city_List2 { line-height: 19px; padding: 10px 0px 15px; }
+.city_List p, .city_List2 p { padding: 5px 0px; margin: 0px 14px; overflow: hidden; }
+.city_List2 p { padding: 0px; }
+.city_List2 p a { margin: 5px 0px; white-space: nowrap; }
+.city_List p.line_xx, .city_List2 p.line_xx { background: url('../images/zc/line_xx.png') repeat-x scroll left bottom transparent; }
+.nxdb { width: 382px; height: 27px; border-bottom: 1px solid rgb(228, 228, 228); }
+.nxdb li { float: left; margin-left: 3px; width: 78px; height: 27px; line-height: 27px; background: url('../images/zc/nxdb_bg.jpg') no-repeat scroll left top transparent; text-align: center; color: rgb(102, 102, 102); cursor: pointer; }
+.nxdb li.cur { background: url('../images/zc/nxdb_bg.jpg') no-repeat scroll left -29px transparent; color: rgb(51, 51, 51); position: relative; top: 0px; margin-bottom: -1px; height: 28px; font-weight: 600; }
+.pstion { position: relative; width: 100%; height: 30px; }
+.nxdb_a { float: right; height: 25px; line-height: 25px; position: absolute; left: 290px; bottom: 0px; }
+.dubai { width: 370px; height: 140px; color: rgb(102, 102, 102); line-height: 18px; padding: 5px; border: 1px solid rgb(204, 204, 204); font-size: 12px; }
+.reg_tip { line-height: 20px; color: rgb(102, 102, 102); padding: 8px 0px; }
+.reg_table td .reg_tip span { font-weight: 600; color: rgb(255, 38, 0); }
+.new_ico { width: 15px; height: 13px; line-height: 0; font-size: 0px; background: url('../images/zc/new.gif') no-repeat scroll left top transparent; position: absolute; left: 155px; top: 0px; }
+.dubai_info .info { color: rgb(92, 147, 73); line-height: 28px; }
+.dubai_info p { color: rgb(51, 51, 51); padding-left: 2em; line-height: 28px; }
+.dubai_info p input { border-bottom: 1px solid rgb(217, 217, 217); height: 18px; padding: 3px; line-height: 18px; color: rgb(78, 116, 162); }
+.input1 { width: 260px; }
+.input2 { width: 200px; }
+.input3 { width: 220px; }
+.h10 { height: 15px; line-height: 0; font-size: 0px; }
+.dubai_btn { width: 127px; height: 38px; background: url('../images/zc/dubai_btn.jpg') no-repeat scroll left top transparent; cursor: pointer; margin-top: 10px; }
+.pdl_20 { padding-left: 20px; }
+.hint_box { position: relative; height: 30px; float: left; }
+.tip_bg { float: left; background: url('../images/zc/tip_bg.gif') no-repeat scroll left top transparent; color: rgb(102, 102, 102); padding-left: 15px; margin-left: 3px; display: inline; }
+.tip_bg span { display: block; height: 31px; float: left; background: url('../images/zc/tip_bg.gif') no-repeat scroll right top transparent; padding-right: 10px; line-height: 31px; color: rgb(153, 153, 153); }
+.tips { color: rgb(144, 142, 141); line-height: 18px; padding: 8px 10px 5px; float: right; }
+#popbox1 { position: absolute; display: none; z-index: 990; }
+.op_bg { width: 400px; padding: 3px; background: url('../images/zc/op_bg.png') repeat scroll 0% 0% transparent; margin: 0px auto; }
+.op_bg .op_subbg { padding: 3px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.op_bg h1 { height: 30px; padding-left: 10px; background: url('../images/zc/op_h1_bg.jpg') repeat scroll 0% 0% transparent; line-height: 30px; color: rgb(255, 255, 255); font-size: 14px; text-align: left; text-shadow: 0px 1px 0px rgb(213, 66, 121); }
+.op_bg h1 * { float: left; }
+.op_bg .op_main { width: 85%; margin: 0px auto; padding-top: 25px; }
+.op_bg .op_main p { line-height: 21px; text-align: left; }
+.op_bg .op_main p strong { padding-bottom: 10px; display: block; }
+.op_bg .op_main .btn { padding: 20px 0px; }
+.op_but:link, .op_but:visited { display: block; height: 28px; background: url('../images/zc/op_but_1.png') no-repeat scroll 0% 0% transparent; color: rgb(255, 255, 255); text-shadow: 0px 1px 0px rgb(230, 117, 38); font-size: 14px; font-weight: bold; line-height: 28px; text-decoration: none; text-align: center; }
+.op_but_w1 { width: 70px; background-position: left top; margin: 0px auto; }
+.op_but_w1:hover { background-position: -160px top; }
+#bg { position: absolute; display: none; top: 0px; left: 0px; width: 100%; opacity: 0.7; background: none repeat scroll 0% 0% rgb(51, 51, 51); z-index: 900; }
+.credibility { height: 1px; font-size: 1px; }
+.left_m { height: 392px; position: relative; background: url('../images/zc/left_mid_v2.png') no-repeat scroll 0% 0% transparent; }
+.openid { position: absolute; bottom: -15px; left: 23px; color: rgb(102, 102, 102); }
+.openid p { padding: 5px 0px; color: rgb(160, 160, 160); }
+.openid a img { vertical-align: text-bottom; margin: 0px 3px 0px 0px; }
+.openid a { color: rgb(102, 102, 102); overflow: hidden; padding: 0px 0px 0px 2px; margin: 0px 13px 0px 0px; }
+.openid a.openid_qq { margin-right: 17px; }
+.openid a:hover { color: rgb(0, 99, 220); text-decoration: none; }
+/* ::::: http://images1.jyimg.com/w4/register/c/signup/inv_reg.css ::::: */
+
+/* ::::: http://images1.jyimg.com/w4/register/c/layer.css ::::: */
+
+* { margin: 0px; padding: 0px; }
+li { list-style-type: none; }
+img { border: medium none; }
+.layerBorder { background: url('../images/zc/layerbg.jpg') repeat scroll 0% 0% transparent; padding: 3px; width: 618px; }
+#con { margin: 0px auto; padding: 4px; background: none repeat scroll 0% 0% rgb(255, 255, 255); width: 610px; }
+.layerTitle { background: url('../images/zc/layertitlebg.jpg') repeat scroll 0% 0% transparent; height: 30px; font-size: 14px; color: rgb(255, 255, 255); padding: 0px 10px; }
+.layerTitle h3 { font-size: 14px; font-weight: bold; line-height: 30px; float: left; width: 400px; }
+.layerTitle a.close { width: 10px; height: 30px; display: block; background: url('../images/zc/closebg.jpg') no-repeat scroll left center transparent; float: right; }
+#tags { padding: 5px 15px 0px; height: 30px; background: url('../images/zc/ultagsbg.jpg') repeat-x scroll left top transparent; }
+#tagContent { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
