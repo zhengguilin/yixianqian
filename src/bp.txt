@@ -1,0 +1,93 @@
+##授权,为了维护代码安全,需要JAVA代码混淆加密,并对服务器进行校验,同事JS加密混淆减少代码容量
+license=
+
+#####IP控制
+ip.isUsed=false
+##暂时只支持数千条
+ip.canUse=
+
+###是否开启Https
+
+
+####是否开启异步跨域
+
+
+####是否开启关系SQL自动redis缓存
+
+
+####是否启用hash自动分库分表
+
+########mongodb配置开始
+#是否使用mongodb
+mongodb.isUsed=false
+#配置多个则以,隔开,继续添加
+mongodb.address=10.10.225.182:40000
+mongodb.username=message_rw
+mongodb.password=123
+mongodb.db=message
+#是否开启复制集
+mongodb.isSecondary=true
+#每个主机答应的连接数（每个主机的连接池大小），当连接池被用光时，会被阻塞住 ，默以为10 --int
+mongoOptions.connectionsPerHost=50
+#线程队列数，它以上面connectionsPerHost值相乘的结果就是线程队列最大值。如果连接线程排满了队列就会抛出“Out of semaphores to get db”错误
+mongoOptions.threadsAllowedToBlockForConnectionMultiplier=1000
+#在建立（打开）套接字连接时的超时时间（ms），默认为0（无限） --int
+mongoOptions.connectTimeout=10000
+#套接字超时时间;该值会被传递给Socket.setSoTimeout(int)。默认为0（无限） --int
+mongoOptions.socketTimeout=10000
+mongoOptions.socketKeepAlive=true
+#控制系统在发生连接错误时是否重试 ，默认为false --boolean
+mongoOptions.autoConnectRetry=true
+##########mongodb配置结束
+
+
+
+####sql 数据库配置开始
+#是否使用sql
+sql.isUsed=true
+sql.url=jdbc:mysql://localhost:3306/yixianqian
+sql.driverClassName=com.mysql.jdbc.Driver
+sql.username=root
+sql.password=123456
+##连接池支持的最大连接数
+sql.maxActive=100
+#连接池中最少空闲maxIdle个连接
+sql.minIdle=10
+#初始化连接数目
+sql.initialSize=10
+#连接池中连接用完时,新的请求等待时间,毫秒
+sql.maxWait=10000
+#每以下毫秒检查一次连接池中空闲的连接,把空闲时间超过minEvictableIdleTimeMillis毫秒的连接断开,直到连接池中的连接数到minIdle为止 
+sql.timeBetweenEvictionRunsMillis=30000
+#连接池中连接可空闲的时间,毫秒
+sql.minEvictableIdleTimeMillis=30000
+#活动连接的最大空闲时间
+sql.removeAbandonedTimeout=60
+#连接池收回空闲的活动连接时是否打印消息
+sql.logAbandoned=false
+#是否清理removeAbandonedTimeout秒没有使用的活动连接,清理后并没有放回连接池
+sql.removeAbandoned=true
+####sql 数据库配置结束
+
+###redis配置开始
+#是否使用redis
+redis.isUsed=false
+#单个应用中的链接池最大链接数
+redis.maxActive=150
+#单个应用中的链接池最大空闲数
+redis.maxIdle=50
+#单个应用中的链接池取链接时最大等待时间，单位：ms
+redis.maxWait=1000
+#设置在每一次取对象时测试ping
+redis.testOnBorrow=false
+#设置redis connect request response timeout 单位:ms
+redis.timeout=2000
+#master redis server 设置  
+redis.masterConfString=10.10.224.78:6379,10.10.224.80:6379
+#slave redis server 设置[可选]
+redis.slaveConfString=
+###redis配置结束
+
+
+
+
