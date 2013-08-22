@@ -1,0 +1,353 @@
+/* ::::: http://images1.jyimg.com/w4/login/c/jy_login.css ::::: */
+body {
+	font-size: 12px;
+	color: rgb(51, 51, 51);
+	font-family: Arial, Helvetica, sans-serif;
+	background: url('../images/login/bg.jpg') repeat scroll 0% 0% transparent;
+}
+
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,table,td,p,input,button {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.cf:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0px;
+	content: " ";
+	clear: both;
+	height: 0px;
+}
+
+.cf {
+	
+}
+
+img {
+	border: medium none;
+	vertical-align: top;
+}
+
+.color_999 {
+	color: rgb(153, 153, 153);
+}
+
+.w950 {
+	width: 950px;
+	margin: 0px auto;
+}
+
+.header {
+	height: 104px;
+	background: none repeat scroll 0% 0% rgb(240, 59, 110);
+	border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.header h1.logo {
+	display: inline;
+	float: left;
+	width: 392px;
+	height: 84px;
+	overflow: hidden;
+}
+
+.logo_right_ad {
+	display: inline;
+	float: right;
+	width: 330px;
+	height: 84px;
+	overflow: hidden;
+}
+
+.logo_right_ad a {
+	display: block;
+	width: 330px;
+	height: 84px;
+	overflow: hidden;
+}
+
+.main {
+	width: 950px;
+	height: 433px;
+	overflow: hidden;
+	margin: -21px auto 0px;
+	position: relative;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 3px 5px 6px rgb(153, 153, 153);
+}
+
+.login {
+	display: inline;
+	float: left;
+	width: 372px;
+	margin: 33px 0px 0px 40px;
+}
+
+h2.login_tt {
+	height: 45px;
+	font-size: 24px;
+	font-family: 'microsoft yahei';
+	color: rgb(255, 255, 255);
+	background: url('../images/login/login_tt.png') repeat-x scroll 0% 0% transparent;
+	border: 1px solid rgb(223, 46, 96);
+	font-weight: 500;
+}
+
+h2.login_tt span {
+	display: inline;
+	float: left;
+	line-height: 28px;
+	padding: 9px 0px 0px 18px;
+	text-shadow: 0px 0px 1px rgb(243, 137, 152);
+}
+
+.login_cn {
+	border-right: 1px solid rgb(206, 206, 206);
+	border-width: medium 1px 1px;
+	border-style: none solid solid;
+	border-color: -moz-use-text-color rgb(206, 206, 206) rgb(206, 206, 206);
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	padding: 0px 1px 1px;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
+
+.login_cn2 {
+	border-right: 3px solid rgb(244, 244, 244);
+	border-width: 5px 3px 3px;
+	border-style: solid;
+	border-color: rgb(244, 244, 244);
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	padding: 5px 0px 10px;
+	margin: 0px;
+}
+
+.login_cn2 form {
+	margin: 0px;
+	padding: 0px 0px 0px 38px;
+}
+
+.login_cn2 div.error_txt {
+	width: 290px;
+	height: 24px;
+	line-height: 24px;
+	text-indent: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 1px solid rgb(254, 65, 69);
+	color: rgb(225, 58, 43);
+	background: url('../images/login/icon_error.gif') no-repeat scroll 8px 5px
+		rgb(250, 249, 203);
+	margin-bottom: 10px;
+}
+
+.login_cn2 dl {
+	padding: 0px 0px 10px;
+	overflow: hidden;
+}
+
+.login_cn2 dl dt {
+	display: inline;
+	float: left;
+	width: 68px;
+	height: 26px;
+	line-height: 26px;
+	color: rgb(74, 74, 74);
+}
+
+.login_cn2 dl dd {
+	display: inline;
+	float: left;
+	width: 250px;
+}
+
+.login_cn2 dl.zh dd input,.login_cn2 dl.mm dd input {
+	display: inline;
+	float: left;
+	width: 220px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0px 0px 0px 2px;
+	border: 1px solid rgb(217, 217, 217);
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	color: rgb(156, 156, 156);
+	font-size: 12px;
+}
+
+.login_cn2 dl.btn_dl dd p {
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+
+.login_cn2 dl.btn_dl a.login_btn {
+	display: inline;
+	float: left;
+	width: 87px;
+	height: 33px;
+	line-height: 32px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	background: url('../images/login/login_btn.png') no-repeat scroll 0% 0% transparent;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'microsoft yahei', '黑体';
+	text-shadow: 0px 0px 1px rgb(22, 100, 90);
+	margin: 0px 20px 0px 0px;
+}
+
+.login_cn2 dl.btn_dl a.login_btn:hover {
+	background-position: left bottom;
+	text-decoration: none;
+}
+
+.login_cn2 dl.btn_dl a.forget_mm {
+	display: inline;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	color: rgb(0, 102, 204);
+	text-decoration: underline;
+	padding: 10px 0px 0px;
+}
+
+.login_cn2 dl.btn_dl dd p.checkbox_zddl {
+	height: 18px;
+	line-height: 18px;
+}
+
+.login_cn2 dl.btn_dl dd p.checkbox_zddl input {
+	vertical-align: -2px;
+	margin-right: 5px;
+}
+
+.login_othor {
+	padding: 0px 15px;
+}
+
+.login_othor p {
+	height: 24px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.login_othor p a {
+	color: rgb(102, 102, 102);
+	display: inline;
+	float: left;
+	margin-right: 5px;
+}
+
+.login_othor p a img {
+	display: inline;
+	vertical-align: -2px;
+	margin-right: 5px;
+}
+
+.login_txt {
+	padding: 0px 15px;
+}
+
+.login_txt p {
+	height: 24px;
+	line-height: 24px;
+	background: url('../images/login/icon_1.gif') no-repeat scroll left center transparent;
+	padding: 0px 0px 0px 10px;
+}
+
+.login_txt p.reg_vip a {
+	color: rgb(0, 102, 204);
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+div.shai_xf {
+	width: 950px;
+	height: 18px;
+	margin: 12px auto;
+}
+
+div.shai_xf a {
+	display: inline;
+	float: right;
+	width: 227px;
+	height: 18px;
+	overflow: hidden;
+	text-indent: -99999em;
+	background: url('../images/login/shai_xf.png') no-repeat scroll 0% 0% transparent;
+}
+
+body {
+	
+}
+
+.header div.w950,.main {
+	
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.hf_wapper {
+	width: 950px;
+	margin: 0px auto;
+	clear: both;
+	font-family: SimSun, Arial, Helvetica, sans-serif;
+}
+
+.hf_wapper img,.hf_wapper img a {
+	border: medium none;
+}
+
+#common_footer {
+	width: 950px;
+	font-size: 12px;
+	padding: 20px 0px;
+	text-align: center;
+	line-height: 2;
+	color: rgb(99, 99, 99);
+}
+
+#common_footer p {
+	text-align: center;
+}
+
+#common_footer p a {
+	margin: 0px 8px;
+	padding: 0px;
+	color: rgb(99, 99, 99);
+	text-decoration: none;
+}
+
+#common_footer p a:hover {
+	margin: 0px 8px;
+	color: rgb(231, 65, 127);
+	text-decoration: underline;
+}
+
+#common_footer p .bot_link_none:hover {
+	color: rgb(99, 99, 99);
+	text-decoration: none;
+}
