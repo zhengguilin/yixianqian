@@ -71,7 +71,7 @@ sql.removeAbandoned=true
 
 ###redis配置开始
 #是否使用redis
-redis.isUsed=false
+redis.isUsed=true
 #单个应用中的链接池最大链接数
 redis.maxActive=150
 #单个应用中的链接池最大空闲数
@@ -83,7 +83,7 @@ redis.testOnBorrow=false
 #设置redis connect request response timeout 单位:ms
 redis.timeout=2000
 #master redis server 设置  
-redis.masterConfString=10.10.224.78:6379,10.10.224.80:6379
+redis.masterConfString=127.0.0.1:6379,127.0.0.1:6379
 #slave redis server 设置[可选]
 redis.slaveConfString=
 ###redis配置结束

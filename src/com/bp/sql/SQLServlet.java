@@ -87,6 +87,7 @@ public class SQLServlet extends BaseServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String sql = req.getParameter("sql");
+		System.out.println(sql);
 		if (T.isNullOrEmpty(sql)) {
 			T.print(resp, "请输入参数sql");
 		} else {
